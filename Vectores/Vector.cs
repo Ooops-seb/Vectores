@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Runtime.CompilerServices;
+using System.Globalization;
 
 namespace Vectores
 {
@@ -26,12 +27,14 @@ namespace Vectores
         public float X { get => mX; set => mX = value; }
         public float Y { get => mY; set => mY = value; }
 
+        public double datoAncho { get; set; }
+        public double datoAlto { get; set; } 
+
         //CONTROL DE GRAFICOS
         private Graphics mGraph;
         Pen myPencil;
         Pen AxisPencil;
         Pen ArrowPencil;
-        Bitmap mig;
 
         //CONSTRUCTOR
         public VectorOrigen(float mX, float mY)
@@ -308,6 +311,40 @@ namespace Vectores
             //4
             mGraph.DrawLine(myPencil, auxBx, auxAy, auxAx, auxAy);
         }
+
+        public double Calcular_Perimetro(PictureBox picCanvas, Point PuntoA, Point PuntoB)
+        {
+            double Ax = (double)PuntoA.X;
+            double Ay = (double)PuntoA.Y;
+            double Bx = (double)PuntoB.X;
+            double By = (double)PuntoB.Y;
+
+            double ancho = Math.Abs(Bx - Ax);
+            double alto = Math.Abs(By - Ay);
+
+            this.datoAlto = alto;
+            this.datoAncho = ancho;
+
+            double perimetro = 2* (ancho + alto);
+
+            return perimetro;
+        }
+
+        public double Calcular_Area(PictureBox picCanvas, Point PuntoA, Point PuntoB)
+        {
+            double Ax = (double)PuntoA.X;
+            double Ay = (double)PuntoA.Y;
+            double Bx = (double)PuntoB.X;
+            double By = (double)PuntoB.Y;
+
+            double ancho = Math.Abs(Bx - Ax);
+            double alto = Math.Abs(By - Ay);
+
+            double area = ancho * alto;
+
+            return area;
+        }
+
     }
     #endregion
 }

@@ -30,7 +30,7 @@ namespace Vectores
         #region Menu Personalizado
         private void customizeDesing()
         {
-            PanelSubMenuDraw.Visible = false;
+            Panel_SubMenuDibujar .Visible = false;
             PanelSubMenuOperations.Visible = false;
             PanelSubMenuOperationsEscalar.Visible = false;
             PanelSubMenuOperationsSuma.Visible = false;
@@ -39,29 +39,33 @@ namespace Vectores
             PanelSubMenuOperationsSentido.Visible = false;
             PanelSubMenuOperationsSuma.Visible = false;
             Panel_MenuDibujarOrigen.Visible = false;
-            Panel_Ecuaciones.Visible = false;
-            Panel_SubMenuCuadratica.Visible = false;
+            Panel_DibujarFiguras.Visible = false;
+            Panel_SubMenuDibujarCuadrado.Visible = false;
             Panel_SubMenuRecta.Visible = false;
             Panel_SubMenuDibujoLibre.Visible = false;
+            Panel_CuadradoDibujar.Visible = false;
         }
-        
+
         private void hideMenu()
         {
             if (Panel_MenuDibujarOrigen.Visible == true)
                 Panel_MenuDibujarOrigen.Visible = false;
-            if (Panel_Ecuaciones.Visible == true)
-                Panel_Ecuaciones.Visible = false;
+            if (Panel_DibujarFiguras.Visible == true)
+                Panel_DibujarFiguras.Visible = false;
             if (Panel_SubMenuDibujoLibre.Visible == true)
                 Panel_SubMenuDibujoLibre.Visible = false;
         }
         private void hideSubMenu()
         {
+            //if (Panel_SubMenuDibujar )
             if (PanelSubMenuOperations.Visible == true)
                 PanelSubMenuOperations.Visible = false;
-            if (Panel_SubMenuCuadratica.Visible == true)
-                Panel_SubMenuCuadratica.Visible = false;
+            if (Panel_SubMenuDibujarCuadrado.Visible == true)
+                Panel_SubMenuDibujarCuadrado.Visible = false;
             if (Panel_SubMenuRecta.Visible == true)
                 Panel_SubMenuRecta.Visible = false;
+            if (Panel_CuadradoDibujar.Visible == true)
+                Panel_CuadradoDibujar.Visible = false;
         }
 
         private void hideSubSubMenu()
@@ -135,7 +139,7 @@ namespace Vectores
             Btn_ReDraw.Visible = true;
             vect.DrawAxis(pctBox_Graph);
             BtnMenuOperations.Visible = true;
-            showSubMenu(PanelSubMenuDraw);
+            showSubMenu(Panel_SubMenuDibujar );
             showMenu(Panel_MenuDibujarOrigen);
         }
 
@@ -151,7 +155,7 @@ namespace Vectores
             pictureBox_FreeDraw.Visible = false;
             vect.Limpiar(pctBox_Graph);
             vect.DrawAxis(pctBox_Graph);
-            showMenu(Panel_Ecuaciones);
+            showMenu(Panel_DibujarFiguras);
         }
         #endregion
 
@@ -181,7 +185,7 @@ namespace Vectores
                     lblAngulo.Text = "vector.";
                 }
             }
-            catch(Exception msg)
+            catch(Exception)
             {
                 MessageBox.Show("No se ha graficado ningún plano.");
             }
@@ -202,7 +206,7 @@ namespace Vectores
                 lblAngulo.Visible = true;
                 lblAngulo.Text = "" + vect.Calcular_angulo(x, y) + " °";
             }
-            catch(Exception msg)
+            catch(Exception)
             {
                 MessageBox.Show("Ingrese valores para graficar.");
             }
@@ -219,7 +223,7 @@ namespace Vectores
                 int y = int.Parse(txtAxisY.Text);
                 vect.DrawColorVector(pctBox_Graph, escalar * x, escalar * y);
             }
-            catch (Exception msg)
+            catch (Exception)
             {
                 MessageBox.Show("Ingrese valores para graficar.");
             }
@@ -235,7 +239,7 @@ namespace Vectores
                 lblVectorActual_PnlEscalar.Visible = true;
                 lblVectorActual_PnlEscalar.Text = "(" + x + " , " + y + ")";
             }
-            catch (Exception msg)
+            catch (Exception)
             {
                 PanelSubMenuOperationsEscalar.Enabled = false;
                 MessageBox.Show("Ingrese valores para graficar.");
@@ -258,7 +262,7 @@ namespace Vectores
                 lblVectorActualX_PnlCambiarSentido.Text = x.ToString();
                 lblVectorActualY_PnlCambiarSentido.Text = y.ToString();
             }
-            catch (Exception msg)
+            catch (Exception)
             {
                 PanelSubMenuOperationsSentido.Enabled = false;
                 MessageBox.Show("Ingrese valores para graficar.");
@@ -322,7 +326,7 @@ namespace Vectores
                 txtSumaVectorX1.Text = x.ToString();
                 txtSumaVectorY1.Text = y.ToString();
             }
-            catch (Exception msg)
+            catch (Exception)
             {
                 PanelSuma.Enabled = false;
                 MessageBox.Show("Ingrese valores para graficar.");
@@ -346,7 +350,7 @@ namespace Vectores
                 lblSumaY.Text = auxSumaY.ToString();
                 showOperationsMenu(PanelSumaVector);
             }
-            catch (Exception msg)
+            catch (Exception)
             {
                 MessageBox.Show("Ingrese valores a sumar.");
             }
@@ -375,7 +379,7 @@ namespace Vectores
 
                 showSubSubMenu(PanelSubMenuOperationsResta);
             }
-            catch (Exception msg)
+            catch (Exception)
             {
                 PanelSuma.Enabled = false;
                 MessageBox.Show("Ingrese valores para graficar.");
@@ -399,7 +403,7 @@ namespace Vectores
                 lblRestaY.Text = auxRestaY.ToString();
                 showOperationsMenu(PanelRestaVector);
             }
-            catch (Exception msg)
+            catch (Exception)
             {
                 MessageBox.Show("Ingrese valores a restar.");
             }
@@ -429,7 +433,7 @@ namespace Vectores
 
                 showSubSubMenu(PanelSubMenuOperationsProducto);
             }
-            catch (Exception msg)
+            catch (Exception)
             {
                 PanelProducto.Enabled = false;
                 PanelSubMenuOperationsProducto.Enabled = false;
@@ -462,7 +466,7 @@ namespace Vectores
 
                 showOperationsMenu(PanelProductoVector);
             }
-            catch(Exception msg)
+            catch(Exception)
             {
                 MessageBox.Show("Ingrese valores a calcular.");
             }
@@ -473,7 +477,7 @@ namespace Vectores
 
         private void pctBox_Graph_MouseDown(object sender, MouseEventArgs e)
         {
-            if (Panel_SubMenuCuadratica.Visible == true)
+            if (Panel_SubMenuDibujarCuadrado.Visible == true)
             {
                 Point AuxPuntoB = new Point();
                 Point AuxPuntoA = new Point();
@@ -497,7 +501,7 @@ namespace Vectores
 
                 vect.DrawRectangle(pctBox_Graph, AuxPuntoA, AuxPuntoB);
             }
-            else if (PanelSubMenuDraw.Visible == true){
+            else if (Panel_SubMenuDibujar .Visible == true){
                 //txtAxisX.Text = e.X.ToString();
                 //txtAxisY.Text = e.Y.ToString();
 
@@ -557,7 +561,7 @@ namespace Vectores
 
         private void Btn_SubMenuCuadratica_Click(object sender, EventArgs e)
         {
-            showSubMenu(Panel_SubMenuCuadratica);
+            showSubMenu(Panel_SubMenuDibujarCuadrado);
         }
 
         private void Frm_Vectores_Load(object sender, EventArgs e)
@@ -571,34 +575,40 @@ namespace Vectores
         //DIBUJO ARCOIRIS
         private void pictureBox_FreeDraw_MouseMove(object sender, MouseEventArgs e)
         {
-            if (PanelSubMenuDraw.Visible == false)
+            if (Panel_SubMenuDibujar .Visible == false)
             {
                 var rand = new Random();
                 pictureBox_FreeDraw.Visible = true;
                 pictureBox_FreeDraw.Image = (Image)mig;
-                if ((e.Button == MouseButtons.Left) && (e.X < pictureBox_FreeDraw.Width && e.Y < pictureBox_FreeDraw.Height && e.Y >= 0 && e.X >= 0))
+                try
                 {
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X, e.Y, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 2, e.Y + 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 2, e.Y - 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 2, e.Y - 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 2, e.Y + 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 2, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 2, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 2, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 2, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y + 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y - 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y - 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y + 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
-                    ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                    if ((e.Button == MouseButtons.Left) && (e.X < pictureBox_FreeDraw.Width && e.Y < pictureBox_FreeDraw.Height && e.Y >= 0 && e.X >= 0))
+                    {
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X, e.Y, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 2, e.Y + 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 2, e.Y - 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 2, e.Y - 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 2, e.Y + 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 2, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 2, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 2, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 2, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y + 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y - 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y - 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y + 2, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X, e.Y + 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X, e.Y - 1, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X + 1, e.Y, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                        ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
+                    }
+                }
+                catch(Exception)
+                {
                 }
             }
             else
@@ -614,94 +624,42 @@ namespace Vectores
             pictureBox_FreeDraw.Visible = true;
         }
 
-        //REVISAR CODIGO
-        private void ecuacionRecta()
-        {
-            double pendiente, intery, tang, interX1, angle;
-            double px1, px2, py1, py2, yy2, Y, x, yy;
-
-            try
-            {
-                px1 = Convert.ToDouble(txtPuntoAX);
-                px2 = Convert.ToDouble(txtPuntoBX);
-                py1 = Convert.ToDouble(txtPuntoAY);
-                py2 = Convert.ToDouble(txtPuntoBY);
-                Y = 1;
-
-                pendiente = ((py2 - py1) / (px2 - px1));
-                txtPendiente.Text = pendiente.ToString();
-
-                yy = pendiente * (px1 * -1);
-                yy2 = yy * (py1 * -1) * -1;
-
-                if (pendiente < 0)
-                {
-                    x = (pendiente * -1);
-                    txtEcuacionX.Text = x.ToString();
-                    Y = 1;
-                    txtEcuacionY.Text = Y.ToString();
-                    txtEcuacionB.Text = yy2.ToString();
-
-                    intery = ((yy2 * -1) / Math.Abs(pendiente));
-                    txtPuntoX.Text = intery.ToString();
-                    txtPuntoY.Text = yy2.ToString();
-                }
-                else
-                {
-                    txtEcuacionX.Text = pendiente.ToString();
-                    Y = -1;
-                    txtEcuacionY.Text = Y.ToString();
-                    txtEcuacionB.Text = yy2.ToString();
-
-                    intery = ((yy2 * -1) / Math.Abs(pendiente));
-                    txtPuntoX.Text = intery.ToString();
-                    txtPuntoY.Text = yy2.ToString();
-                }
-
-                tang = ((Math.Atan(pendiente) * 180) / Math.PI);
-
-                if (tang < 0)
-                {
-                    angle = tang * 180;
-                    txtAngle.Text = angle.ToString();
-                }
-                else
-                {
-                    txtAngle.Text = tang.ToString();
-                }
-            }
-            catch(Exception msg)
-            {
-                MessageBox.Show("Ingrese datos a calcular");
-            }
-
-        }
-
-        private void ecuacionGeneral()
-        {
-
-        }
-
         private void Btn_DibujarFigurasCuadrado_Click(object sender, EventArgs e)
         {
-
-            int aX = Convert.ToInt32(txtCuadradoPuntoAx.Text);
-            int aY = Convert.ToInt32(txtCuadradoPuntoAy.Text);
-
-            int bX = Convert.ToInt32(txtCuadradoPuntoBx.Text);
-            int bY = Convert.ToInt32(txtCuadradoPuntoBy.Text);
-
-            Point PuntoA = new Point(aX, aY);
-            Point PuntoB = new Point(bX, bY);
-            vect.DrawRectangle(pctBox_Graph, PuntoA, PuntoB);
             try
             {
-                
+                int aX = Convert.ToInt32(txtCuadradoPuntoAx.Text);
+                int aY = Convert.ToInt32(txtCuadradoPuntoAy.Text);
+
+                int bX = Convert.ToInt32(txtCuadradoPuntoBx.Text);
+                int bY = Convert.ToInt32(txtCuadradoPuntoBy.Text);
+
+                Point PuntoA = new Point(aX, aY);
+                Point PuntoB = new Point(bX, bY);
+                vect.DrawRectangle(pctBox_Graph, PuntoA, PuntoB);
+
+                #region Calcular Perimetro y Área
+                double perimetro = vect.Calcular_Perimetro(pctBox_Graph, PuntoA, PuntoB);
+                lblPerimetroCuadrado.Visible = true;
+                lblPerimetroCuadrado.Text = Math.Round(perimetro,2).ToString();
+                double area = vect.Calcular_Area(pctBox_Graph, PuntoA, PuntoB);
+                lblAreaCuadrado.Visible = true;
+                lblAreaCuadrado.Text = Math.Round(area,2).ToString();
+
+                lblBaseCuadrado.Visible = true;
+                lblBaseCuadrado.Text = vect.datoAncho.ToString();
+                lblAlturaCuadrado.Visible = true;
+                lblAlturaCuadrado.Text = vect.datoAlto.ToString();
+
+                Panel_CuadradoDibujar.Visible = true;
+                //showSubMenu(Panel_CuadradoDibujar);
+                #endregion
             }
-            catch(Exception msg)
+            catch(Exception)
             {
                 MessageBox.Show("¡Ingrese valores a dibujar!");
             }
         }
+
     }
 }

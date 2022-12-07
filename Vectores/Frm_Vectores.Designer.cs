@@ -8,7 +8,6 @@ namespace Vectores
         Graphics imEditor;
         Pen penGrosor;
         SolidBrush brushRelleno;
-        int rojo, verde, azul = 0;
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>
@@ -45,8 +44,29 @@ namespace Vectores
             this.Panel_SubMenuDibujoLibre = new System.Windows.Forms.Panel();
             this.label52 = new System.Windows.Forms.Label();
             this.Btn_MenuDibujoLibre = new System.Windows.Forms.Button();
-            this.Panel_Ecuaciones = new System.Windows.Forms.Panel();
-            this.Panel_SubMenuCuadratica = new System.Windows.Forms.Panel();
+            this.Panel_DibujarFiguras = new System.Windows.Forms.Panel();
+            this.Panel_SubMenuDibujarCuadrado= new System.Windows.Forms.Panel();
+            this.Btn_DibujarFigurasCuadrado = new System.Windows.Forms.Button();
+            this.Panel_CuadradoDibujar = new System.Windows.Forms.Panel();
+            this.lblAlturaCuadrado = new System.Windows.Forms.Label();
+            this.lblBaseCuadrado = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.lblAreaCuadrado = new System.Windows.Forms.Label();
+            this.lblPerimetroCuadrado = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.txtCuadradoPuntoBy = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtCuadradoPuntoBx = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.txtCuadradoPuntoAy = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.txtCuadradoPuntoAx = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.Btn_SubMenuCuadratica = new System.Windows.Forms.Button();
             this.Panel_SubMenuRecta = new System.Windows.Forms.Panel();
@@ -176,7 +196,7 @@ namespace Vectores
             this.txtEscalar = new System.Windows.Forms.TextBox();
             this.Btn_SubMenuOperationsEscalar = new System.Windows.Forms.Button();
             this.BtnMenuOperations = new System.Windows.Forms.Button();
-            this.PanelSubMenuDraw = new System.Windows.Forms.Panel();
+            this.Panel_SubMenuDibujar  = new System.Windows.Forms.Panel();
             this.linkLabel_Animar = new System.Windows.Forms.LinkLabel();
             this.linkLabel_DibujarMouse = new System.Windows.Forms.LinkLabel();
             this.Btn_DrawVector = new System.Windows.Forms.Button();
@@ -194,25 +214,17 @@ namespace Vectores
             this.label6 = new System.Windows.Forms.Label();
             this.lblMagnitud = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.txtCuadradoPuntoBy = new System.Windows.Forms.TextBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.txtCuadradoPuntoBx = new System.Windows.Forms.TextBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.txtCuadradoPuntoAy = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.txtCuadradoPuntoAx = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
-            this.Btn_DibujarFigurasCuadrado = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_FreeDraw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBox_Graph)).BeginInit();
             this.PanelPrincipal.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             this.Panel_SubMenuDibujoLibre.SuspendLayout();
-            this.Panel_Ecuaciones.SuspendLayout();
-            this.Panel_SubMenuCuadratica.SuspendLayout();
+            this.Panel_DibujarFiguras.SuspendLayout();
+            this.Panel_SubMenuDibujarCuadrado.SuspendLayout();
+            this.Panel_CuadradoDibujar.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.Panel_SubMenuRecta.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -239,11 +251,9 @@ namespace Vectores
             this.groupBox7.SuspendLayout();
             this.PanelSubMenuOperationsSentido.SuspendLayout();
             this.PanelSubMenuOperationsEscalar.SuspendLayout();
-            this.PanelSubMenuDraw.SuspendLayout();
+            this.Panel_SubMenuDibujar .SuspendLayout();
             this.PanelTitle.SuspendLayout();
             this.PanelDetallesGrafico.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox14.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -320,7 +330,7 @@ namespace Vectores
             this.PanelMenu.AutoScroll = true;
             this.PanelMenu.Controls.Add(this.Panel_SubMenuDibujoLibre);
             this.PanelMenu.Controls.Add(this.Btn_MenuDibujoLibre);
-            this.PanelMenu.Controls.Add(this.Panel_Ecuaciones);
+            this.PanelMenu.Controls.Add(this.Panel_DibujarFiguras);
             this.PanelMenu.Controls.Add(this.Btn_DibujarFiguras);
             this.PanelMenu.Controls.Add(this.Panel_MenuDibujarOrigen);
             this.PanelMenu.Controls.Add(this.Btn_MenuDibujarOrigen);
@@ -335,7 +345,7 @@ namespace Vectores
             this.Panel_SubMenuDibujoLibre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
             this.Panel_SubMenuDibujoLibre.Controls.Add(this.label52);
             this.Panel_SubMenuDibujoLibre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_SubMenuDibujoLibre.Location = new System.Drawing.Point(0, 1865);
+            this.Panel_SubMenuDibujoLibre.Location = new System.Drawing.Point(0, 1965);
             this.Panel_SubMenuDibujoLibre.Name = "Panel_SubMenuDibujoLibre";
             this.Panel_SubMenuDibujoLibre.Size = new System.Drawing.Size(283, 63);
             this.Panel_SubMenuDibujoLibre.TabIndex = 12;
@@ -361,7 +371,7 @@ namespace Vectores
             this.Btn_MenuDibujoLibre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_MenuDibujoLibre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_MenuDibujoLibre.ForeColor = System.Drawing.Color.White;
-            this.Btn_MenuDibujoLibre.Location = new System.Drawing.Point(0, 1825);
+            this.Btn_MenuDibujoLibre.Location = new System.Drawing.Point(0, 1925);
             this.Btn_MenuDibujoLibre.Name = "Btn_MenuDibujoLibre";
             this.Btn_MenuDibujoLibre.Size = new System.Drawing.Size(283, 40);
             this.Btn_MenuDibujoLibre.TabIndex = 11;
@@ -369,33 +379,290 @@ namespace Vectores
             this.Btn_MenuDibujoLibre.UseVisualStyleBackColor = false;
             this.Btn_MenuDibujoLibre.Click += new System.EventHandler(this.Btn_MenuDibujoLibre_Click);
             // 
-            // Panel_Ecuaciones
+            // Panel_DibujarFiguras
             // 
-            this.Panel_Ecuaciones.AutoSize = true;
-            this.Panel_Ecuaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
-            this.Panel_Ecuaciones.Controls.Add(this.Panel_SubMenuCuadratica);
-            this.Panel_Ecuaciones.Controls.Add(this.Btn_SubMenuCuadratica);
-            this.Panel_Ecuaciones.Controls.Add(this.Panel_SubMenuRecta);
-            this.Panel_Ecuaciones.Controls.Add(this.Btn_SubMenuRecta);
-            this.Panel_Ecuaciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_Ecuaciones.Location = new System.Drawing.Point(0, 1195);
-            this.Panel_Ecuaciones.Name = "Panel_Ecuaciones";
-            this.Panel_Ecuaciones.Size = new System.Drawing.Size(283, 630);
-            this.Panel_Ecuaciones.TabIndex = 10;
-            this.Panel_Ecuaciones.Visible = false;
+            this.Panel_DibujarFiguras.AutoSize = true;
+            this.Panel_DibujarFiguras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
+            this.Panel_DibujarFiguras.Controls.Add(this.Panel_SubMenuDibujarCuadrado);
+            this.Panel_DibujarFiguras.Controls.Add(this.Btn_SubMenuCuadratica);
+            this.Panel_DibujarFiguras.Controls.Add(this.Panel_SubMenuRecta);
+            this.Panel_DibujarFiguras.Controls.Add(this.Btn_SubMenuRecta);
+            this.Panel_DibujarFiguras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_DibujarFiguras.Location = new System.Drawing.Point(0, 1195);
+            this.Panel_DibujarFiguras.Name = "Panel_DibujarFiguras";
+            this.Panel_DibujarFiguras.Size = new System.Drawing.Size(283, 730);
+            this.Panel_DibujarFiguras.TabIndex = 10;
+            this.Panel_DibujarFiguras.Visible = false;
             // 
-            // Panel_SubMenuCuadratica
+            // Panel_SubMenuDibujarCuadrado
             // 
-            this.Panel_SubMenuCuadratica.Controls.Add(this.Btn_DibujarFigurasCuadrado);
-            this.Panel_SubMenuCuadratica.Controls.Add(this.groupBox13);
-            this.Panel_SubMenuCuadratica.Controls.Add(this.groupBox14);
-            this.Panel_SubMenuCuadratica.Controls.Add(this.label73);
-            this.Panel_SubMenuCuadratica.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_SubMenuCuadratica.Location = new System.Drawing.Point(0, 440);
-            this.Panel_SubMenuCuadratica.Name = "Panel_SubMenuCuadratica";
-            this.Panel_SubMenuCuadratica.Size = new System.Drawing.Size(283, 190);
-            this.Panel_SubMenuCuadratica.TabIndex = 13;
-            this.Panel_SubMenuCuadratica.Visible = false;
+            this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.Btn_DibujarFigurasCuadrado);
+            this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.Panel_CuadradoDibujar);
+            this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.groupBox13);
+            this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.groupBox14);
+            this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.label73);
+            this.Panel_SubMenuDibujarCuadrado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_SubMenuDibujarCuadrado.Location = new System.Drawing.Point(0, 440);
+            this.Panel_SubMenuDibujarCuadrado.Name = "Panel_SubMenuDibujarCuadrado";
+            this.Panel_SubMenuDibujarCuadrado.Size = new System.Drawing.Size(283, 290);
+            this.Panel_SubMenuDibujarCuadrado.TabIndex = 13;
+            this.Panel_SubMenuDibujarCuadrado.Visible = false;
+            // 
+            // Btn_DibujarFigurasCuadrado
+            // 
+            this.Btn_DibujarFigurasCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_DibujarFigurasCuadrado.Location = new System.Drawing.Point(105, 148);
+            this.Btn_DibujarFigurasCuadrado.Name = "Btn_DibujarFigurasCuadrado";
+            this.Btn_DibujarFigurasCuadrado.Size = new System.Drawing.Size(68, 26);
+            this.Btn_DibujarFigurasCuadrado.TabIndex = 42;
+            this.Btn_DibujarFigurasCuadrado.Text = "Dibujar";
+            this.Btn_DibujarFigurasCuadrado.UseVisualStyleBackColor = true;
+            this.Btn_DibujarFigurasCuadrado.Click += new System.EventHandler(this.Btn_DibujarFigurasCuadrado_Click);
+            // 
+            // Panel_CuadradoDibujar
+            // 
+            this.Panel_CuadradoDibujar.Controls.Add(this.lblAlturaCuadrado);
+            this.Panel_CuadradoDibujar.Controls.Add(this.lblBaseCuadrado);
+            this.Panel_CuadradoDibujar.Controls.Add(this.label60);
+            this.Panel_CuadradoDibujar.Controls.Add(this.label59);
+            this.Panel_CuadradoDibujar.Controls.Add(this.lblAreaCuadrado);
+            this.Panel_CuadradoDibujar.Controls.Add(this.lblPerimetroCuadrado);
+            this.Panel_CuadradoDibujar.Controls.Add(this.label58);
+            this.Panel_CuadradoDibujar.Controls.Add(this.label57);
+            this.Panel_CuadradoDibujar.Controls.Add(this.label71);
+            this.Panel_CuadradoDibujar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Panel_CuadradoDibujar.Location = new System.Drawing.Point(0, 180);
+            this.Panel_CuadradoDibujar.Name = "Panel_CuadradoDibujar";
+            this.Panel_CuadradoDibujar.Size = new System.Drawing.Size(283, 110);
+            this.Panel_CuadradoDibujar.TabIndex = 43;
+            this.Panel_CuadradoDibujar.Visible = false;
+            // 
+            // lblAlturaCuadrado
+            // 
+            this.lblAlturaCuadrado.AutoSize = true;
+            this.lblAlturaCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlturaCuadrado.ForeColor = System.Drawing.Color.Black;
+            this.lblAlturaCuadrado.Location = new System.Drawing.Point(193, 30);
+            this.lblAlturaCuadrado.Name = "lblAlturaCuadrado";
+            this.lblAlturaCuadrado.Size = new System.Drawing.Size(42, 16);
+            this.lblAlturaCuadrado.TabIndex = 48;
+            this.lblAlturaCuadrado.Text = "Base:";
+            this.lblAlturaCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAlturaCuadrado.Visible = false;
+            // 
+            // lblBaseCuadrado
+            // 
+            this.lblBaseCuadrado.AutoSize = true;
+            this.lblBaseCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaseCuadrado.ForeColor = System.Drawing.Color.Black;
+            this.lblBaseCuadrado.Location = new System.Drawing.Point(81, 30);
+            this.lblBaseCuadrado.Name = "lblBaseCuadrado";
+            this.lblBaseCuadrado.Size = new System.Drawing.Size(42, 16);
+            this.lblBaseCuadrado.TabIndex = 47;
+            this.lblBaseCuadrado.Text = "Base:";
+            this.lblBaseCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBaseCuadrado.Visible = false;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.Black;
+            this.label60.Location = new System.Drawing.Point(143, 30);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(44, 16);
+            this.label60.TabIndex = 46;
+            this.label60.Text = "Altura:";
+            this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.Black;
+            this.label59.Location = new System.Drawing.Point(34, 30);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(42, 16);
+            this.label59.TabIndex = 45;
+            this.label59.Text = "Base:";
+            this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAreaCuadrado
+            // 
+            this.lblAreaCuadrado.AutoSize = true;
+            this.lblAreaCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAreaCuadrado.ForeColor = System.Drawing.Color.Black;
+            this.lblAreaCuadrado.Location = new System.Drawing.Point(114, 80);
+            this.lblAreaCuadrado.Name = "lblAreaCuadrado";
+            this.lblAreaCuadrado.Size = new System.Drawing.Size(39, 16);
+            this.lblAreaCuadrado.TabIndex = 44;
+            this.lblAreaCuadrado.Text = "Área:";
+            this.lblAreaCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAreaCuadrado.Visible = false;
+            // 
+            // lblPerimetroCuadrado
+            // 
+            this.lblPerimetroCuadrado.AutoSize = true;
+            this.lblPerimetroCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerimetroCuadrado.ForeColor = System.Drawing.Color.Black;
+            this.lblPerimetroCuadrado.Location = new System.Drawing.Point(114, 58);
+            this.lblPerimetroCuadrado.Name = "lblPerimetroCuadrado";
+            this.lblPerimetroCuadrado.Size = new System.Drawing.Size(68, 16);
+            this.lblPerimetroCuadrado.TabIndex = 43;
+            this.lblPerimetroCuadrado.Text = "Perímetro:";
+            this.lblPerimetroCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPerimetroCuadrado.Visible = false;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.Black;
+            this.label58.Location = new System.Drawing.Point(15, 80);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(39, 16);
+            this.label58.TabIndex = 42;
+            this.label58.Text = "Área:";
+            this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.Black;
+            this.label57.Location = new System.Drawing.Point(15, 58);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(68, 16);
+            this.label57.TabIndex = 41;
+            this.label57.Text = "Perímetro:";
+            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Location = new System.Drawing.Point(68, 10);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(151, 16);
+            this.label71.TabIndex = 17;
+            this.label71.Text = "Detalles de la figura:";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.txtCuadradoPuntoBy);
+            this.groupBox13.Controls.Add(this.label53);
+            this.groupBox13.Controls.Add(this.label54);
+            this.groupBox13.Controls.Add(this.txtCuadradoPuntoBx);
+            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.Location = new System.Drawing.Point(149, 45);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(123, 88);
+            this.groupBox13.TabIndex = 41;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Punto B";
+            // 
+            // txtCuadradoPuntoBy
+            // 
+            this.txtCuadradoPuntoBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.txtCuadradoPuntoBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCuadradoPuntoBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuadradoPuntoBy.Location = new System.Drawing.Point(48, 59);
+            this.txtCuadradoPuntoBy.Name = "txtCuadradoPuntoBy";
+            this.txtCuadradoPuntoBy.Size = new System.Drawing.Size(35, 19);
+            this.txtCuadradoPuntoBy.TabIndex = 17;
+            this.txtCuadradoPuntoBy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.White;
+            this.label53.Location = new System.Drawing.Point(13, 31);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(18, 16);
+            this.label53.TabIndex = 14;
+            this.label53.Text = "X:";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.White;
+            this.label54.Location = new System.Drawing.Point(13, 59);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(19, 16);
+            this.label54.TabIndex = 15;
+            this.label54.Text = "Y:";
+            // 
+            // txtCuadradoPuntoBx
+            // 
+            this.txtCuadradoPuntoBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.txtCuadradoPuntoBx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCuadradoPuntoBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuadradoPuntoBx.Location = new System.Drawing.Point(48, 31);
+            this.txtCuadradoPuntoBx.Name = "txtCuadradoPuntoBx";
+            this.txtCuadradoPuntoBx.Size = new System.Drawing.Size(35, 19);
+            this.txtCuadradoPuntoBx.TabIndex = 16;
+            this.txtCuadradoPuntoBx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.txtCuadradoPuntoAy);
+            this.groupBox14.Controls.Add(this.label55);
+            this.groupBox14.Controls.Add(this.txtCuadradoPuntoAx);
+            this.groupBox14.Controls.Add(this.label56);
+            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.Location = new System.Drawing.Point(6, 45);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(123, 88);
+            this.groupBox14.TabIndex = 40;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Punto A";
+            // 
+            // txtCuadradoPuntoAy
+            // 
+            this.txtCuadradoPuntoAy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.txtCuadradoPuntoAy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCuadradoPuntoAy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuadradoPuntoAy.Location = new System.Drawing.Point(57, 59);
+            this.txtCuadradoPuntoAy.Name = "txtCuadradoPuntoAy";
+            this.txtCuadradoPuntoAy.Size = new System.Drawing.Size(35, 19);
+            this.txtCuadradoPuntoAy.TabIndex = 13;
+            this.txtCuadradoPuntoAy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.White;
+            this.label55.Location = new System.Drawing.Point(22, 31);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(18, 16);
+            this.label55.TabIndex = 10;
+            this.label55.Text = "X:";
+            // 
+            // txtCuadradoPuntoAx
+            // 
+            this.txtCuadradoPuntoAx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.txtCuadradoPuntoAx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCuadradoPuntoAx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuadradoPuntoAx.Location = new System.Drawing.Point(57, 31);
+            this.txtCuadradoPuntoAx.Name = "txtCuadradoPuntoAx";
+            this.txtCuadradoPuntoAx.Size = new System.Drawing.Size(35, 19);
+            this.txtCuadradoPuntoAx.TabIndex = 12;
+            this.txtCuadradoPuntoAx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.ForeColor = System.Drawing.Color.White;
+            this.label56.Location = new System.Drawing.Point(22, 59);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(19, 16);
+            this.label56.TabIndex = 11;
+            this.label56.Text = "Y:";
             // 
             // label73
             // 
@@ -818,7 +1085,7 @@ namespace Vectores
             this.Panel_MenuDibujarOrigen.AutoSize = true;
             this.Panel_MenuDibujarOrigen.Controls.Add(this.PanelSubMenuOperations);
             this.Panel_MenuDibujarOrigen.Controls.Add(this.BtnMenuOperations);
-            this.Panel_MenuDibujarOrigen.Controls.Add(this.PanelSubMenuDraw);
+            this.Panel_MenuDibujarOrigen.Controls.Add(this.Panel_SubMenuDibujar );
             this.Panel_MenuDibujarOrigen.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_MenuDibujarOrigen.Location = new System.Drawing.Point(0, 40);
             this.Panel_MenuDibujarOrigen.Name = "Panel_MenuDibujarOrigen";
@@ -1976,21 +2243,21 @@ namespace Vectores
             this.BtnMenuOperations.Visible = false;
             this.BtnMenuOperations.Click += new System.EventHandler(this.BtnMenuOperations_Click);
             // 
-            // PanelSubMenuDraw
+            // Panel_SubMenuDibujar 
             // 
-            this.PanelSubMenuDraw.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
-            this.PanelSubMenuDraw.Controls.Add(this.linkLabel_Animar);
-            this.PanelSubMenuDraw.Controls.Add(this.linkLabel_DibujarMouse);
-            this.PanelSubMenuDraw.Controls.Add(this.Btn_DrawVector);
-            this.PanelSubMenuDraw.Controls.Add(this.txtAxisY);
-            this.PanelSubMenuDraw.Controls.Add(this.txtAxisX);
-            this.PanelSubMenuDraw.Controls.Add(this.label2);
-            this.PanelSubMenuDraw.Controls.Add(this.label1);
-            this.PanelSubMenuDraw.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSubMenuDraw.Location = new System.Drawing.Point(0, 0);
-            this.PanelSubMenuDraw.Name = "PanelSubMenuDraw";
-            this.PanelSubMenuDraw.Size = new System.Drawing.Size(283, 90);
-            this.PanelSubMenuDraw.TabIndex = 4;
+            this.Panel_SubMenuDibujar .BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
+            this.Panel_SubMenuDibujar .Controls.Add(this.linkLabel_Animar);
+            this.Panel_SubMenuDibujar .Controls.Add(this.linkLabel_DibujarMouse);
+            this.Panel_SubMenuDibujar .Controls.Add(this.Btn_DrawVector);
+            this.Panel_SubMenuDibujar .Controls.Add(this.txtAxisY);
+            this.Panel_SubMenuDibujar .Controls.Add(this.txtAxisX);
+            this.Panel_SubMenuDibujar .Controls.Add(this.label2);
+            this.Panel_SubMenuDibujar .Controls.Add(this.label1);
+            this.Panel_SubMenuDibujar .Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_SubMenuDibujar .Location = new System.Drawing.Point(0, 0);
+            this.Panel_SubMenuDibujar .Name = "Panel_SubMenuDibujar ";
+            this.Panel_SubMenuDibujar .Size = new System.Drawing.Size(283, 90);
+            this.Panel_SubMenuDibujar .TabIndex = 4;
             // 
             // linkLabel_Animar
             // 
@@ -2186,133 +2453,6 @@ namespace Vectores
             this.label4.TabIndex = 19;
             this.label4.Text = "Magnitud: ";
             // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.txtCuadradoPuntoBy);
-            this.groupBox13.Controls.Add(this.label53);
-            this.groupBox13.Controls.Add(this.label54);
-            this.groupBox13.Controls.Add(this.txtCuadradoPuntoBx);
-            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(149, 45);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(123, 88);
-            this.groupBox13.TabIndex = 41;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Punto B";
-            // 
-            // txtCuadradoPuntoBy
-            // 
-            this.txtCuadradoPuntoBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.txtCuadradoPuntoBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCuadradoPuntoBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCuadradoPuntoBy.Location = new System.Drawing.Point(48, 59);
-            this.txtCuadradoPuntoBy.Name = "txtCuadradoPuntoBy";
-            this.txtCuadradoPuntoBy.Size = new System.Drawing.Size(35, 19);
-            this.txtCuadradoPuntoBy.TabIndex = 17;
-            this.txtCuadradoPuntoBy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.Color.White;
-            this.label53.Location = new System.Drawing.Point(13, 31);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(18, 16);
-            this.label53.TabIndex = 14;
-            this.label53.Text = "X:";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.White;
-            this.label54.Location = new System.Drawing.Point(13, 59);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(19, 16);
-            this.label54.TabIndex = 15;
-            this.label54.Text = "Y:";
-            // 
-            // txtCuadradoPuntoBx
-            // 
-            this.txtCuadradoPuntoBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.txtCuadradoPuntoBx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCuadradoPuntoBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCuadradoPuntoBx.Location = new System.Drawing.Point(48, 31);
-            this.txtCuadradoPuntoBx.Name = "txtCuadradoPuntoBx";
-            this.txtCuadradoPuntoBx.Size = new System.Drawing.Size(35, 19);
-            this.txtCuadradoPuntoBx.TabIndex = 16;
-            this.txtCuadradoPuntoBx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.txtCuadradoPuntoAy);
-            this.groupBox14.Controls.Add(this.label55);
-            this.groupBox14.Controls.Add(this.txtCuadradoPuntoAx);
-            this.groupBox14.Controls.Add(this.label56);
-            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(6, 45);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(123, 88);
-            this.groupBox14.TabIndex = 40;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Punto A";
-            // 
-            // txtCuadradoPuntoAy
-            // 
-            this.txtCuadradoPuntoAy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.txtCuadradoPuntoAy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCuadradoPuntoAy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCuadradoPuntoAy.Location = new System.Drawing.Point(57, 59);
-            this.txtCuadradoPuntoAy.Name = "txtCuadradoPuntoAy";
-            this.txtCuadradoPuntoAy.Size = new System.Drawing.Size(35, 19);
-            this.txtCuadradoPuntoAy.TabIndex = 13;
-            this.txtCuadradoPuntoAy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.ForeColor = System.Drawing.Color.White;
-            this.label55.Location = new System.Drawing.Point(22, 31);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(18, 16);
-            this.label55.TabIndex = 10;
-            this.label55.Text = "X:";
-            // 
-            // txtCuadradoPuntoAx
-            // 
-            this.txtCuadradoPuntoAx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.txtCuadradoPuntoAx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCuadradoPuntoAx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCuadradoPuntoAx.Location = new System.Drawing.Point(57, 31);
-            this.txtCuadradoPuntoAx.Name = "txtCuadradoPuntoAx";
-            this.txtCuadradoPuntoAx.Size = new System.Drawing.Size(35, 19);
-            this.txtCuadradoPuntoAx.TabIndex = 12;
-            this.txtCuadradoPuntoAx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.Color.White;
-            this.label56.Location = new System.Drawing.Point(22, 59);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(19, 16);
-            this.label56.TabIndex = 11;
-            this.label56.Text = "Y:";
-            // 
-            // Btn_DibujarFigurasCuadrado
-            // 
-            this.Btn_DibujarFigurasCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_DibujarFigurasCuadrado.Location = new System.Drawing.Point(105, 148);
-            this.Btn_DibujarFigurasCuadrado.Name = "Btn_DibujarFigurasCuadrado";
-            this.Btn_DibujarFigurasCuadrado.Size = new System.Drawing.Size(68, 26);
-            this.Btn_DibujarFigurasCuadrado.TabIndex = 42;
-            this.Btn_DibujarFigurasCuadrado.Text = "Dibujar";
-            this.Btn_DibujarFigurasCuadrado.UseVisualStyleBackColor = true;
-            this.Btn_DibujarFigurasCuadrado.Click += new System.EventHandler(this.Btn_DibujarFigurasCuadrado_Click);
-            // 
             // Frm_Vectores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2339,9 +2479,15 @@ namespace Vectores
             this.PanelMenu.PerformLayout();
             this.Panel_SubMenuDibujoLibre.ResumeLayout(false);
             this.Panel_SubMenuDibujoLibre.PerformLayout();
-            this.Panel_Ecuaciones.ResumeLayout(false);
-            this.Panel_SubMenuCuadratica.ResumeLayout(false);
-            this.Panel_SubMenuCuadratica.PerformLayout();
+            this.Panel_DibujarFiguras.ResumeLayout(false);
+            this.Panel_SubMenuDibujarCuadrado.ResumeLayout(false);
+            this.Panel_SubMenuDibujarCuadrado.PerformLayout();
+            this.Panel_CuadradoDibujar.ResumeLayout(false);
+            this.Panel_CuadradoDibujar.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.Panel_SubMenuRecta.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
@@ -2386,16 +2532,12 @@ namespace Vectores
             this.PanelSubMenuOperationsSentido.PerformLayout();
             this.PanelSubMenuOperationsEscalar.ResumeLayout(false);
             this.PanelSubMenuOperationsEscalar.PerformLayout();
-            this.PanelSubMenuDraw.ResumeLayout(false);
-            this.PanelSubMenuDraw.PerformLayout();
+            this.Panel_SubMenuDibujar .ResumeLayout(false);
+            this.Panel_SubMenuDibujar .PerformLayout();
             this.PanelTitle.ResumeLayout(false);
             this.PanelTitle.PerformLayout();
             this.PanelDetallesGrafico.ResumeLayout(false);
             this.PanelDetallesGrafico.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2512,19 +2654,17 @@ namespace Vectores
         private System.Windows.Forms.TextBox txtEscalar;
         private System.Windows.Forms.Button Btn_SubMenuOperationsEscalar;
         private System.Windows.Forms.Button BtnMenuOperations;
-        private System.Windows.Forms.Panel PanelSubMenuDraw;
+        private System.Windows.Forms.Panel Panel_SubMenuDibujar ;
         private System.Windows.Forms.Button Btn_DrawVector;
         private System.Windows.Forms.TextBox txtAxisY;
         private System.Windows.Forms.TextBox txtAxisX;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btn_MenuDibujarOrigen;
-        private System.Windows.Forms.Panel Panel_Ecuaciones;
+        private System.Windows.Forms.Panel Panel_DibujarFiguras;
         private System.Windows.Forms.Button Btn_DibujarFiguras;
         private System.Windows.Forms.LinkLabel linkLabel_DibujarMouse;
         private System.Windows.Forms.LinkLabel linkLabel_Animar;
-        private System.Windows.Forms.Panel Panel_SubMenuCuadratica;
-        private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Button Btn_SubMenuCuadratica;
         private System.Windows.Forms.Panel Panel_SubMenuRecta;
         private System.Windows.Forms.Button Btn_SubMenuRecta;
@@ -2561,7 +2701,14 @@ namespace Vectores
         private System.Windows.Forms.Button Btn_MenuDibujoLibre;
         private System.Windows.Forms.Panel Panel_SubMenuDibujoLibre;
         private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Panel Panel_SubMenuDibujarCuadrado;
         private System.Windows.Forms.Button Btn_DibujarFigurasCuadrado;
+        private System.Windows.Forms.Panel Panel_CuadradoDibujar;
+        private System.Windows.Forms.Label lblAreaCuadrado;
+        private System.Windows.Forms.Label lblPerimetroCuadrado;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label71;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.TextBox txtCuadradoPuntoBy;
         private System.Windows.Forms.Label label53;
@@ -2572,6 +2719,11 @@ namespace Vectores
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.TextBox txtCuadradoPuntoAx;
         private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label lblAlturaCuadrado;
+        private System.Windows.Forms.Label lblBaseCuadrado;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label59;
     }
 }
 

@@ -311,36 +311,157 @@ namespace Vectores
             //4
             mGraph.DrawLine(myPencil, auxBx, auxAy, auxAx, auxAy);
         }
+        public void DrawRectangle(PictureBox picCanvas, Point PuntoA, Point PuntoB, float penWidth)
+        {
 
-        public double Calcular_Perimetro(PictureBox picCanvas, Point PuntoA, Point PuntoB)
+            float auxBx = (float)PuntoB.X;
+            float auxBy = (float)PuntoB.Y;
+            float auxAx = (float)PuntoA.X;
+            float auxAy = (float)PuntoA.Y;
+
+            var rand = new Random();
+            Color color = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            mGraph = picCanvas.CreateGraphics();
+            myPencil = new Pen(color, penWidth);
+
+            mWidth = picCanvas.Width;
+            mHeight = picCanvas.Height;
+            mcX = mWidth / 2;
+            mcY = mHeight / 2;
+
+            float oX = mcX;
+            float oY = mcY;
+
+            auxAx = oX + (auxAx * scale);
+            auxAy = oY - (auxAy * scale);
+            auxBx = oX + (auxBx * scale);
+            auxBy = oY - (auxBy * scale);
+
+            //1
+            mGraph.DrawLine(myPencil, auxAx, auxAy, auxAx, auxBy);
+            //2
+            mGraph.DrawLine(myPencil, auxAx, auxBy, auxBx, auxBy);
+            //3
+            mGraph.DrawLine(myPencil, auxBx, auxBy, auxBx, auxAy);
+            //4
+            mGraph.DrawLine(myPencil, auxBx, auxAy, auxAx, auxAy);
+        }
+
+        public void DrawTriangle(PictureBox picCanvas, Point PuntoA, Point PuntoB)
+        {
+            double Bx = PuntoB.X;
+            double By = PuntoB.Y;
+            double Ax = PuntoA.X;
+            double Ay = PuntoA.Y;
+
+            var rand = new Random();
+            Color color = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            mGraph = picCanvas.CreateGraphics();
+            myPencil = new Pen(color, 2);
+
+            mWidth = picCanvas.Width;
+            mHeight = picCanvas.Height;
+            mcX = mWidth / 2;
+            mcY = mHeight / 2;       
+
+            double distanceAB = Math.Sqrt(Math.Pow((Bx - Ax), 2) + (Math.Pow((By - Ay), 2)));
+            double puntoMedioX = (Ax + Bx)/2;
+            double puntoMedioY = (Ay + By)/2;
+            //double altura = Math.Sqrt(Math.Pow(distanceAB, 2) - Math.Pow(distanceAB / 2, 2));
+            double altura = (Math.Sqrt(3) / 2) * distanceAB;
+
+            double auxX = -puntoMedioY;
+            double auxY = puntoMedioX;
+
+            double distanceAux = Math.Sqrt(Math.Pow(auxX, 2) + Math.Pow(auxY, 2));
+
+            double Cx = altura * auxX / distanceAux;
+            double Cy = altura * auxY / distanceAux;
+
+            float oX = mcX;
+            float oY = mcY;
+
+            float auxAx = oX + (float)(Ax * scale);
+            float auxAy = oY - (float)(Ay * scale);
+            float auxBx = oX + (float)(Bx * scale);
+            float auxBy = oY - (float)(By * scale);
+            float auxCx = oX + (float)(Cx * scale);
+            float auxCy = oY - (float)(Cy * scale);
+
+            mGraph.DrawLine(myPencil, auxAx, auxAy, auxBx, auxBy);
+            mGraph.DrawLine(myPencil, auxCx, auxCy, auxAx, auxAy);
+            mGraph.DrawLine(myPencil, auxBx, auxBy, auxCx, auxCy);
+
+            /*
+            #region Imprimir magnitud vector
+            Font txtFont = new Font("Arial", 8);
+            SolidBrush txtBrush = new SolidBrush(Color.Red);
+            float auxfX = scale * ();
+            float auxfY = oY - (y * scale) / 2;
+            if (x > 0 && y > 0)
+                mGraph.DrawString(distance.ToString(), txtFont, txtBrush, auxfX + 10, auxfY - 10);
+            else if (x < 0 && y < 0)
+                mGraph.DrawString(Calcular_magnitud(x, y).ToString(), txtFont, txtBrush, auxfX - 10, auxfY + 10);
+            else if (x > 0 && y < 0)
+                mGraph.DrawString(Calcular_magnitud(x, y).ToString(), txtFont, txtBrush, auxfX + 10, auxfY + 10);
+            else
+                mGraph.DrawString(Calcular_magnitud(x, y).ToString(), txtFont, txtBrush, auxfX - 10, auxfY - 10);
+            #endregion
+            */
+        }
+
+        public double Calcular_Perimetro(Point PuntoA, Point PuntoB, String figura)
         {
             double Ax = (double)PuntoA.X;
             double Ay = (double)PuntoA.Y;
             double Bx = (double)PuntoB.X;
             double By = (double)PuntoB.Y;
 
-            double ancho = Math.Abs(Bx - Ax);
-            double alto = Math.Abs(By - Ay);
+            double perimetro = 0;
+            double ancho = 0;
+            double alto = 0;
+
+            if (figura == "cuadrado")
+            {
+                ancho = Math.Abs(Bx - Ax);
+                alto = Math.Abs(By - Ay);
+                perimetro = 2 * (ancho + alto);
+            }
+            else if (figura == "triangulo")
+            {
+                double lado = ancho;
+                perimetro = lado * 3;
+            }
 
             this.datoAlto = alto;
             this.datoAncho = ancho;
 
-            double perimetro = 2* (ancho + alto);
-
             return perimetro;
         }
 
-        public double Calcular_Area(PictureBox picCanvas, Point PuntoA, Point PuntoB)
+        public double Calcular_Area(Point PuntoA, Point PuntoB, String figura)
         {
+
             double Ax = (double)PuntoA.X;
             double Ay = (double)PuntoA.Y;
             double Bx = (double)PuntoB.X;
             double By = (double)PuntoB.Y;
+            double area = 0;
 
-            double ancho = Math.Abs(Bx - Ax);
-            double alto = Math.Abs(By - Ay);
+            if (figura == "cuadrado")
+            {
+                double ancho = Math.Abs(Bx - Ax);
+                double alto = Math.Abs(By - Ay);
 
-            double area = ancho * alto;
+                area = ancho * alto;
+            }
+            else if( figura == "triangulo")
+            {
+                double ancho = Math.Abs(Bx - Ax);
+                double alto = Math.Abs(By - Ay);
+
+                area = (ancho * alto) / 2;
+            }
 
             return area;
         }

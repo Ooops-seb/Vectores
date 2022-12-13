@@ -45,7 +45,31 @@ namespace Vectores
             this.label52 = new System.Windows.Forms.Label();
             this.Btn_MenuDibujoLibre = new System.Windows.Forms.Button();
             this.Panel_DibujarFiguras = new System.Windows.Forms.Panel();
-            this.Panel_SubMenuDibujarCuadrado= new System.Windows.Forms.Panel();
+            this.Panel_SubMenuDibujarTriangulo = new System.Windows.Forms.Panel();
+            this.Btn_DibujarFigurasTriangulo = new System.Windows.Forms.Button();
+            this.Panel_TrianguloDibujar = new System.Windows.Forms.Panel();
+            this.lblAlturaTriangulo = new System.Windows.Forms.Label();
+            this.lblBaseTriangulo = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.lblAreaTriangulo = new System.Windows.Forms.Label();
+            this.lblPerimetroTriangulo = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.txtTrianguloBy = new System.Windows.Forms.TextBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.txtTrianguloBx = new System.Windows.Forms.TextBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.txtTrianguloAy = new System.Windows.Forms.TextBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.txtTrianguloAx = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.Btn_SubMenuTriangulo = new System.Windows.Forms.Button();
+            this.Panel_SubMenuDibujarCuadrado = new System.Windows.Forms.Panel();
             this.Btn_DibujarFigurasCuadrado = new System.Windows.Forms.Button();
             this.Panel_CuadradoDibujar = new System.Windows.Forms.Panel();
             this.lblAlturaCuadrado = new System.Windows.Forms.Label();
@@ -68,7 +92,7 @@ namespace Vectores
             this.txtCuadradoPuntoAx = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
-            this.Btn_SubMenuCuadratica = new System.Windows.Forms.Button();
+            this.Btn_SubMenuCuadrado = new System.Windows.Forms.Button();
             this.Panel_SubMenuRecta = new System.Windows.Forms.Panel();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.txtPendiente = new System.Windows.Forms.TextBox();
@@ -196,7 +220,7 @@ namespace Vectores
             this.txtEscalar = new System.Windows.Forms.TextBox();
             this.Btn_SubMenuOperationsEscalar = new System.Windows.Forms.Button();
             this.BtnMenuOperations = new System.Windows.Forms.Button();
-            this.Panel_SubMenuDibujar  = new System.Windows.Forms.Panel();
+            this.Panel_SubMenuDibujar = new System.Windows.Forms.Panel();
             this.linkLabel_Animar = new System.Windows.Forms.LinkLabel();
             this.linkLabel_DibujarMouse = new System.Windows.Forms.LinkLabel();
             this.Btn_DrawVector = new System.Windows.Forms.Button();
@@ -221,6 +245,10 @@ namespace Vectores
             this.PanelMenu.SuspendLayout();
             this.Panel_SubMenuDibujoLibre.SuspendLayout();
             this.Panel_DibujarFiguras.SuspendLayout();
+            this.Panel_SubMenuDibujarTriangulo.SuspendLayout();
+            this.Panel_TrianguloDibujar.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox16.SuspendLayout();
             this.Panel_SubMenuDibujarCuadrado.SuspendLayout();
             this.Panel_CuadradoDibujar.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -251,7 +279,7 @@ namespace Vectores
             this.groupBox7.SuspendLayout();
             this.PanelSubMenuOperationsSentido.SuspendLayout();
             this.PanelSubMenuOperationsEscalar.SuspendLayout();
-            this.Panel_SubMenuDibujar .SuspendLayout();
+            this.Panel_SubMenuDibujar.SuspendLayout();
             this.PanelTitle.SuspendLayout();
             this.PanelDetallesGrafico.SuspendLayout();
             this.SuspendLayout();
@@ -345,7 +373,7 @@ namespace Vectores
             this.Panel_SubMenuDibujoLibre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
             this.Panel_SubMenuDibujoLibre.Controls.Add(this.label52);
             this.Panel_SubMenuDibujoLibre.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_SubMenuDibujoLibre.Location = new System.Drawing.Point(0, 1965);
+            this.Panel_SubMenuDibujoLibre.Location = new System.Drawing.Point(0, 2285);
             this.Panel_SubMenuDibujoLibre.Name = "Panel_SubMenuDibujoLibre";
             this.Panel_SubMenuDibujoLibre.Size = new System.Drawing.Size(283, 63);
             this.Panel_SubMenuDibujoLibre.TabIndex = 12;
@@ -371,7 +399,7 @@ namespace Vectores
             this.Btn_MenuDibujoLibre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_MenuDibujoLibre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_MenuDibujoLibre.ForeColor = System.Drawing.Color.White;
-            this.Btn_MenuDibujoLibre.Location = new System.Drawing.Point(0, 1925);
+            this.Btn_MenuDibujoLibre.Location = new System.Drawing.Point(0, 2245);
             this.Btn_MenuDibujoLibre.Name = "Btn_MenuDibujoLibre";
             this.Btn_MenuDibujoLibre.Size = new System.Drawing.Size(283, 40);
             this.Btn_MenuDibujoLibre.TabIndex = 11;
@@ -384,15 +412,315 @@ namespace Vectores
             this.Panel_DibujarFiguras.AutoSize = true;
             this.Panel_DibujarFiguras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
             this.Panel_DibujarFiguras.Controls.Add(this.Panel_SubMenuDibujarCuadrado);
-            this.Panel_DibujarFiguras.Controls.Add(this.Btn_SubMenuCuadratica);
+            this.Panel_DibujarFiguras.Controls.Add(this.Btn_SubMenuCuadrado);
+            this.Panel_DibujarFiguras.Controls.Add(this.Panel_SubMenuDibujarTriangulo);
+            this.Panel_DibujarFiguras.Controls.Add(this.Btn_SubMenuTriangulo);
             this.Panel_DibujarFiguras.Controls.Add(this.Panel_SubMenuRecta);
             this.Panel_DibujarFiguras.Controls.Add(this.Btn_SubMenuRecta);
             this.Panel_DibujarFiguras.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_DibujarFiguras.Location = new System.Drawing.Point(0, 1195);
             this.Panel_DibujarFiguras.Name = "Panel_DibujarFiguras";
-            this.Panel_DibujarFiguras.Size = new System.Drawing.Size(283, 730);
+            this.Panel_DibujarFiguras.Size = new System.Drawing.Size(283, 1050);
             this.Panel_DibujarFiguras.TabIndex = 10;
             this.Panel_DibujarFiguras.Visible = false;
+            // 
+            // Panel_SubMenuDibujarTriangulo
+            // 
+            this.Panel_SubMenuDibujarTriangulo.Controls.Add(this.Btn_DibujarFigurasTriangulo);
+            this.Panel_SubMenuDibujarTriangulo.Controls.Add(this.Panel_TrianguloDibujar);
+            this.Panel_SubMenuDibujarTriangulo.Controls.Add(this.groupBox15);
+            this.Panel_SubMenuDibujarTriangulo.Controls.Add(this.groupBox16);
+            this.Panel_SubMenuDibujarTriangulo.Controls.Add(this.label79);
+            this.Panel_SubMenuDibujarTriangulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_SubMenuDibujarTriangulo.Location = new System.Drawing.Point(0, 440);
+            this.Panel_SubMenuDibujarTriangulo.Name = "Panel_SubMenuDibujarTriangulo";
+            this.Panel_SubMenuDibujarTriangulo.Size = new System.Drawing.Size(283, 290);
+            this.Panel_SubMenuDibujarTriangulo.TabIndex = 15;
+            this.Panel_SubMenuDibujarTriangulo.Visible = false;
+            // 
+            // Btn_DibujarFigurasTriangulo
+            // 
+            this.Btn_DibujarFigurasTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_DibujarFigurasTriangulo.Location = new System.Drawing.Point(105, 148);
+            this.Btn_DibujarFigurasTriangulo.Name = "Btn_DibujarFigurasTriangulo";
+            this.Btn_DibujarFigurasTriangulo.Size = new System.Drawing.Size(68, 26);
+            this.Btn_DibujarFigurasTriangulo.TabIndex = 42;
+            this.Btn_DibujarFigurasTriangulo.Text = "Dibujar";
+            this.Btn_DibujarFigurasTriangulo.UseVisualStyleBackColor = true;
+            this.Btn_DibujarFigurasTriangulo.Click += new System.EventHandler(this.Btn_DibujarFigurasTriangulo_Click);
+            // 
+            // Panel_TrianguloDibujar
+            // 
+            this.Panel_TrianguloDibujar.Controls.Add(this.lblAlturaTriangulo);
+            this.Panel_TrianguloDibujar.Controls.Add(this.lblBaseTriangulo);
+            this.Panel_TrianguloDibujar.Controls.Add(this.label63);
+            this.Panel_TrianguloDibujar.Controls.Add(this.label64);
+            this.Panel_TrianguloDibujar.Controls.Add(this.lblAreaTriangulo);
+            this.Panel_TrianguloDibujar.Controls.Add(this.lblPerimetroTriangulo);
+            this.Panel_TrianguloDibujar.Controls.Add(this.label67);
+            this.Panel_TrianguloDibujar.Controls.Add(this.label68);
+            this.Panel_TrianguloDibujar.Controls.Add(this.label69);
+            this.Panel_TrianguloDibujar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Panel_TrianguloDibujar.Location = new System.Drawing.Point(0, 180);
+            this.Panel_TrianguloDibujar.Name = "Panel_TrianguloDibujar";
+            this.Panel_TrianguloDibujar.Size = new System.Drawing.Size(283, 110);
+            this.Panel_TrianguloDibujar.TabIndex = 43;
+            this.Panel_TrianguloDibujar.Visible = false;
+            // 
+            // lblAlturaTriangulo
+            // 
+            this.lblAlturaTriangulo.AutoSize = true;
+            this.lblAlturaTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlturaTriangulo.ForeColor = System.Drawing.Color.Black;
+            this.lblAlturaTriangulo.Location = new System.Drawing.Point(193, 30);
+            this.lblAlturaTriangulo.Name = "lblAlturaTriangulo";
+            this.lblAlturaTriangulo.Size = new System.Drawing.Size(41, 16);
+            this.lblAlturaTriangulo.TabIndex = 48;
+            this.lblAlturaTriangulo.Text = "Altura";
+            this.lblAlturaTriangulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAlturaTriangulo.Visible = false;
+            // 
+            // lblBaseTriangulo
+            // 
+            this.lblBaseTriangulo.AutoSize = true;
+            this.lblBaseTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBaseTriangulo.ForeColor = System.Drawing.Color.Black;
+            this.lblBaseTriangulo.Location = new System.Drawing.Point(81, 30);
+            this.lblBaseTriangulo.Name = "lblBaseTriangulo";
+            this.lblBaseTriangulo.Size = new System.Drawing.Size(39, 16);
+            this.lblBaseTriangulo.TabIndex = 47;
+            this.lblBaseTriangulo.Text = "Base";
+            this.lblBaseTriangulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBaseTriangulo.Visible = false;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.Black;
+            this.label63.Location = new System.Drawing.Point(143, 30);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(44, 16);
+            this.label63.TabIndex = 46;
+            this.label63.Text = "Altura:";
+            this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.Black;
+            this.label64.Location = new System.Drawing.Point(34, 30);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(42, 16);
+            this.label64.TabIndex = 45;
+            this.label64.Text = "Base:";
+            this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblAreaTriangulo
+            // 
+            this.lblAreaTriangulo.AutoSize = true;
+            this.lblAreaTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAreaTriangulo.ForeColor = System.Drawing.Color.Black;
+            this.lblAreaTriangulo.Location = new System.Drawing.Point(114, 80);
+            this.lblAreaTriangulo.Name = "lblAreaTriangulo";
+            this.lblAreaTriangulo.Size = new System.Drawing.Size(39, 16);
+            this.lblAreaTriangulo.TabIndex = 44;
+            this.lblAreaTriangulo.Text = "Área:";
+            this.lblAreaTriangulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAreaTriangulo.Visible = false;
+            // 
+            // lblPerimetroTriangulo
+            // 
+            this.lblPerimetroTriangulo.AutoSize = true;
+            this.lblPerimetroTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerimetroTriangulo.ForeColor = System.Drawing.Color.Black;
+            this.lblPerimetroTriangulo.Location = new System.Drawing.Point(114, 58);
+            this.lblPerimetroTriangulo.Name = "lblPerimetroTriangulo";
+            this.lblPerimetroTriangulo.Size = new System.Drawing.Size(68, 16);
+            this.lblPerimetroTriangulo.TabIndex = 43;
+            this.lblPerimetroTriangulo.Text = "Perímetro:";
+            this.lblPerimetroTriangulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPerimetroTriangulo.Visible = false;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.Black;
+            this.label67.Location = new System.Drawing.Point(15, 80);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(39, 16);
+            this.label67.TabIndex = 42;
+            this.label67.Text = "Área:";
+            this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.Black;
+            this.label68.Location = new System.Drawing.Point(15, 58);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(68, 16);
+            this.label68.TabIndex = 41;
+            this.label68.Text = "Perímetro:";
+            this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(68, 10);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(151, 16);
+            this.label69.TabIndex = 17;
+            this.label69.Text = "Detalles de la figura:";
+            this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.txtTrianguloBy);
+            this.groupBox15.Controls.Add(this.label70);
+            this.groupBox15.Controls.Add(this.label72);
+            this.groupBox15.Controls.Add(this.txtTrianguloBx);
+            this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Location = new System.Drawing.Point(149, 45);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(123, 88);
+            this.groupBox15.TabIndex = 41;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Punto B";
+            // 
+            // txtTrianguloBy
+            // 
+            this.txtTrianguloBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.txtTrianguloBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTrianguloBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrianguloBy.Location = new System.Drawing.Point(48, 59);
+            this.txtTrianguloBy.Name = "txtTrianguloBy";
+            this.txtTrianguloBy.Size = new System.Drawing.Size(35, 19);
+            this.txtTrianguloBy.TabIndex = 17;
+            this.txtTrianguloBy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.White;
+            this.label70.Location = new System.Drawing.Point(13, 31);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(18, 16);
+            this.label70.TabIndex = 14;
+            this.label70.Text = "X:";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ForeColor = System.Drawing.Color.White;
+            this.label72.Location = new System.Drawing.Point(13, 59);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(19, 16);
+            this.label72.TabIndex = 15;
+            this.label72.Text = "Y:";
+            // 
+            // txtTrianguloBx
+            // 
+            this.txtTrianguloBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.txtTrianguloBx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTrianguloBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrianguloBx.Location = new System.Drawing.Point(48, 31);
+            this.txtTrianguloBx.Name = "txtTrianguloBx";
+            this.txtTrianguloBx.Size = new System.Drawing.Size(35, 19);
+            this.txtTrianguloBx.TabIndex = 16;
+            this.txtTrianguloBx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.txtTrianguloAy);
+            this.groupBox16.Controls.Add(this.label77);
+            this.groupBox16.Controls.Add(this.txtTrianguloAx);
+            this.groupBox16.Controls.Add(this.label78);
+            this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox16.Location = new System.Drawing.Point(6, 45);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(123, 88);
+            this.groupBox16.TabIndex = 40;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Punto A";
+            // 
+            // txtTrianguloAy
+            // 
+            this.txtTrianguloAy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.txtTrianguloAy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTrianguloAy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrianguloAy.Location = new System.Drawing.Point(57, 59);
+            this.txtTrianguloAy.Name = "txtTrianguloAy";
+            this.txtTrianguloAy.Size = new System.Drawing.Size(35, 19);
+            this.txtTrianguloAy.TabIndex = 13;
+            this.txtTrianguloAy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.ForeColor = System.Drawing.Color.White;
+            this.label77.Location = new System.Drawing.Point(22, 31);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(18, 16);
+            this.label77.TabIndex = 10;
+            this.label77.Text = "X:";
+            // 
+            // txtTrianguloAx
+            // 
+            this.txtTrianguloAx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.txtTrianguloAx.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTrianguloAx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrianguloAx.Location = new System.Drawing.Point(57, 31);
+            this.txtTrianguloAx.Name = "txtTrianguloAx";
+            this.txtTrianguloAx.Size = new System.Drawing.Size(35, 19);
+            this.txtTrianguloAx.TabIndex = 12;
+            this.txtTrianguloAx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.ForeColor = System.Drawing.Color.White;
+            this.label78.Location = new System.Drawing.Point(22, 59);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(19, 16);
+            this.label78.TabIndex = 11;
+            this.label78.Text = "Y:";
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Location = new System.Drawing.Point(82, 17);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(121, 16);
+            this.label79.TabIndex = 17;
+            this.label79.Text = "Seleccione puntos:";
+            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Btn_SubMenuTriangulo
+            // 
+            this.Btn_SubMenuTriangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(118)))), ((int)(((byte)(37)))));
+            this.Btn_SubMenuTriangulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_SubMenuTriangulo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.Btn_SubMenuTriangulo.FlatAppearance.BorderSize = 0;
+            this.Btn_SubMenuTriangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_SubMenuTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_SubMenuTriangulo.ForeColor = System.Drawing.Color.White;
+            this.Btn_SubMenuTriangulo.Location = new System.Drawing.Point(0, 410);
+            this.Btn_SubMenuTriangulo.Name = "Btn_SubMenuTriangulo";
+            this.Btn_SubMenuTriangulo.Size = new System.Drawing.Size(283, 30);
+            this.Btn_SubMenuTriangulo.TabIndex = 14;
+            this.Btn_SubMenuTriangulo.Text = "Triángulo";
+            this.Btn_SubMenuTriangulo.UseVisualStyleBackColor = false;
+            this.Btn_SubMenuTriangulo.Click += new System.EventHandler(this.Btn_SubMenuTriangulo_Click);
             // 
             // Panel_SubMenuDibujarCuadrado
             // 
@@ -402,7 +730,7 @@ namespace Vectores
             this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.groupBox14);
             this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.label73);
             this.Panel_SubMenuDibujarCuadrado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_SubMenuDibujarCuadrado.Location = new System.Drawing.Point(0, 440);
+            this.Panel_SubMenuDibujarCuadrado.Location = new System.Drawing.Point(0, 760);
             this.Panel_SubMenuDibujarCuadrado.Name = "Panel_SubMenuDibujarCuadrado";
             this.Panel_SubMenuDibujarCuadrado.Size = new System.Drawing.Size(283, 290);
             this.Panel_SubMenuDibujarCuadrado.TabIndex = 13;
@@ -444,9 +772,9 @@ namespace Vectores
             this.lblAlturaCuadrado.ForeColor = System.Drawing.Color.Black;
             this.lblAlturaCuadrado.Location = new System.Drawing.Point(193, 30);
             this.lblAlturaCuadrado.Name = "lblAlturaCuadrado";
-            this.lblAlturaCuadrado.Size = new System.Drawing.Size(42, 16);
+            this.lblAlturaCuadrado.Size = new System.Drawing.Size(41, 16);
             this.lblAlturaCuadrado.TabIndex = 48;
-            this.lblAlturaCuadrado.Text = "Base:";
+            this.lblAlturaCuadrado.Text = "Altura";
             this.lblAlturaCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblAlturaCuadrado.Visible = false;
             // 
@@ -457,9 +785,9 @@ namespace Vectores
             this.lblBaseCuadrado.ForeColor = System.Drawing.Color.Black;
             this.lblBaseCuadrado.Location = new System.Drawing.Point(81, 30);
             this.lblBaseCuadrado.Name = "lblBaseCuadrado";
-            this.lblBaseCuadrado.Size = new System.Drawing.Size(42, 16);
+            this.lblBaseCuadrado.Size = new System.Drawing.Size(39, 16);
             this.lblBaseCuadrado.TabIndex = 47;
-            this.lblBaseCuadrado.Text = "Base:";
+            this.lblBaseCuadrado.Text = "Base";
             this.lblBaseCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblBaseCuadrado.Visible = false;
             // 
@@ -675,22 +1003,22 @@ namespace Vectores
             this.label73.Text = "Seleccione puntos:";
             this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Btn_SubMenuCuadratica
+            // Btn_SubMenuCuadrado
             // 
-            this.Btn_SubMenuCuadratica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(118)))), ((int)(((byte)(37)))));
-            this.Btn_SubMenuCuadratica.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_SubMenuCuadratica.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
-            this.Btn_SubMenuCuadratica.FlatAppearance.BorderSize = 0;
-            this.Btn_SubMenuCuadratica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SubMenuCuadratica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_SubMenuCuadratica.ForeColor = System.Drawing.Color.White;
-            this.Btn_SubMenuCuadratica.Location = new System.Drawing.Point(0, 410);
-            this.Btn_SubMenuCuadratica.Name = "Btn_SubMenuCuadratica";
-            this.Btn_SubMenuCuadratica.Size = new System.Drawing.Size(283, 30);
-            this.Btn_SubMenuCuadratica.TabIndex = 5;
-            this.Btn_SubMenuCuadratica.Text = "Cuadrado";
-            this.Btn_SubMenuCuadratica.UseVisualStyleBackColor = false;
-            this.Btn_SubMenuCuadratica.Click += new System.EventHandler(this.Btn_SubMenuCuadratica_Click);
+            this.Btn_SubMenuCuadrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(118)))), ((int)(((byte)(37)))));
+            this.Btn_SubMenuCuadrado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Btn_SubMenuCuadrado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
+            this.Btn_SubMenuCuadrado.FlatAppearance.BorderSize = 0;
+            this.Btn_SubMenuCuadrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_SubMenuCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_SubMenuCuadrado.ForeColor = System.Drawing.Color.White;
+            this.Btn_SubMenuCuadrado.Location = new System.Drawing.Point(0, 730);
+            this.Btn_SubMenuCuadrado.Name = "Btn_SubMenuCuadrado";
+            this.Btn_SubMenuCuadrado.Size = new System.Drawing.Size(283, 30);
+            this.Btn_SubMenuCuadrado.TabIndex = 5;
+            this.Btn_SubMenuCuadrado.Text = "Cuadrado";
+            this.Btn_SubMenuCuadrado.UseVisualStyleBackColor = false;
+            this.Btn_SubMenuCuadrado.Click += new System.EventHandler(this.Btn_SubMenuCuadrado_Click);
             // 
             // Panel_SubMenuRecta
             // 
@@ -1085,7 +1413,7 @@ namespace Vectores
             this.Panel_MenuDibujarOrigen.AutoSize = true;
             this.Panel_MenuDibujarOrigen.Controls.Add(this.PanelSubMenuOperations);
             this.Panel_MenuDibujarOrigen.Controls.Add(this.BtnMenuOperations);
-            this.Panel_MenuDibujarOrigen.Controls.Add(this.Panel_SubMenuDibujar );
+            this.Panel_MenuDibujarOrigen.Controls.Add(this.Panel_SubMenuDibujar);
             this.Panel_MenuDibujarOrigen.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_MenuDibujarOrigen.Location = new System.Drawing.Point(0, 40);
             this.Panel_MenuDibujarOrigen.Name = "Panel_MenuDibujarOrigen";
@@ -2243,21 +2571,21 @@ namespace Vectores
             this.BtnMenuOperations.Visible = false;
             this.BtnMenuOperations.Click += new System.EventHandler(this.BtnMenuOperations_Click);
             // 
-            // Panel_SubMenuDibujar 
+            // Panel_SubMenuDibujar
             // 
-            this.Panel_SubMenuDibujar .BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
-            this.Panel_SubMenuDibujar .Controls.Add(this.linkLabel_Animar);
-            this.Panel_SubMenuDibujar .Controls.Add(this.linkLabel_DibujarMouse);
-            this.Panel_SubMenuDibujar .Controls.Add(this.Btn_DrawVector);
-            this.Panel_SubMenuDibujar .Controls.Add(this.txtAxisY);
-            this.Panel_SubMenuDibujar .Controls.Add(this.txtAxisX);
-            this.Panel_SubMenuDibujar .Controls.Add(this.label2);
-            this.Panel_SubMenuDibujar .Controls.Add(this.label1);
-            this.Panel_SubMenuDibujar .Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel_SubMenuDibujar .Location = new System.Drawing.Point(0, 0);
-            this.Panel_SubMenuDibujar .Name = "Panel_SubMenuDibujar ";
-            this.Panel_SubMenuDibujar .Size = new System.Drawing.Size(283, 90);
-            this.Panel_SubMenuDibujar .TabIndex = 4;
+            this.Panel_SubMenuDibujar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
+            this.Panel_SubMenuDibujar.Controls.Add(this.linkLabel_Animar);
+            this.Panel_SubMenuDibujar.Controls.Add(this.linkLabel_DibujarMouse);
+            this.Panel_SubMenuDibujar.Controls.Add(this.Btn_DrawVector);
+            this.Panel_SubMenuDibujar.Controls.Add(this.txtAxisY);
+            this.Panel_SubMenuDibujar.Controls.Add(this.txtAxisX);
+            this.Panel_SubMenuDibujar.Controls.Add(this.label2);
+            this.Panel_SubMenuDibujar.Controls.Add(this.label1);
+            this.Panel_SubMenuDibujar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel_SubMenuDibujar.Location = new System.Drawing.Point(0, 0);
+            this.Panel_SubMenuDibujar.Name = "Panel_SubMenuDibujar";
+            this.Panel_SubMenuDibujar.Size = new System.Drawing.Size(283, 90);
+            this.Panel_SubMenuDibujar.TabIndex = 4;
             // 
             // linkLabel_Animar
             // 
@@ -2480,6 +2808,14 @@ namespace Vectores
             this.Panel_SubMenuDibujoLibre.ResumeLayout(false);
             this.Panel_SubMenuDibujoLibre.PerformLayout();
             this.Panel_DibujarFiguras.ResumeLayout(false);
+            this.Panel_SubMenuDibujarTriangulo.ResumeLayout(false);
+            this.Panel_SubMenuDibujarTriangulo.PerformLayout();
+            this.Panel_TrianguloDibujar.ResumeLayout(false);
+            this.Panel_TrianguloDibujar.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
             this.Panel_SubMenuDibujarCuadrado.ResumeLayout(false);
             this.Panel_SubMenuDibujarCuadrado.PerformLayout();
             this.Panel_CuadradoDibujar.ResumeLayout(false);
@@ -2532,8 +2868,8 @@ namespace Vectores
             this.PanelSubMenuOperationsSentido.PerformLayout();
             this.PanelSubMenuOperationsEscalar.ResumeLayout(false);
             this.PanelSubMenuOperationsEscalar.PerformLayout();
-            this.Panel_SubMenuDibujar .ResumeLayout(false);
-            this.Panel_SubMenuDibujar .PerformLayout();
+            this.Panel_SubMenuDibujar.ResumeLayout(false);
+            this.Panel_SubMenuDibujar.PerformLayout();
             this.PanelTitle.ResumeLayout(false);
             this.PanelTitle.PerformLayout();
             this.PanelDetallesGrafico.ResumeLayout(false);
@@ -2665,7 +3001,7 @@ namespace Vectores
         private System.Windows.Forms.Button Btn_DibujarFiguras;
         private System.Windows.Forms.LinkLabel linkLabel_DibujarMouse;
         private System.Windows.Forms.LinkLabel linkLabel_Animar;
-        private System.Windows.Forms.Button Btn_SubMenuCuadratica;
+        private System.Windows.Forms.Button Btn_SubMenuCuadrado;
         private System.Windows.Forms.Panel Panel_SubMenuRecta;
         private System.Windows.Forms.Button Btn_SubMenuRecta;
         private System.Windows.Forms.GroupBox groupBox11;
@@ -2724,6 +3060,30 @@ namespace Vectores
         private System.Windows.Forms.Label lblBaseCuadrado;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Panel Panel_SubMenuDibujarTriangulo;
+        private System.Windows.Forms.Button Btn_DibujarFigurasTriangulo;
+        private System.Windows.Forms.Panel Panel_TrianguloDibujar;
+        private System.Windows.Forms.Label lblAlturaTriangulo;
+        private System.Windows.Forms.Label lblBaseTriangulo;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label lblAreaTriangulo;
+        private System.Windows.Forms.Label lblPerimetroTriangulo;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.TextBox txtTrianguloBy;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.TextBox txtTrianguloBx;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.TextBox txtTrianguloAy;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.TextBox txtTrianguloAx;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Button Btn_SubMenuTriangulo;
     }
 }
 

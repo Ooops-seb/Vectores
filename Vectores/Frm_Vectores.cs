@@ -44,6 +44,7 @@ namespace Vectores
             Panel_SubMenuRecta.Visible = false;
             Panel_SubMenuDibujoLibre.Visible = false;
             Panel_CuadradoDibujar.Visible = false;
+            Panel_SubMenuDibujarTriangulo.Visible = false;
         }
 
         private void hideMenu()
@@ -62,6 +63,8 @@ namespace Vectores
                 PanelSubMenuOperations.Visible = false;
             if (Panel_SubMenuDibujarCuadrado.Visible == true)
                 Panel_SubMenuDibujarCuadrado.Visible = false;
+            if (Panel_SubMenuDibujarTriangulo.Visible == true)
+                Panel_SubMenuDibujarTriangulo.Visible = false;
             if (Panel_SubMenuRecta.Visible == true)
                 Panel_SubMenuRecta.Visible = false;
             if (Panel_CuadradoDibujar.Visible == true)
@@ -499,12 +502,31 @@ namespace Vectores
                     txtCuadradoPuntoBy.Text = AuxPuntoB.Y.ToString();
                 }
 
-                vect.DrawRectangle(pctBox_Graph, AuxPuntoA, AuxPuntoB);
+                vect.DrawRectangle(pctBox_Graph, AuxPuntoA, AuxPuntoB, (float)1);
+            }
+            else if (Panel_SubMenuDibujarTriangulo.Visible == true)
+            {
+                Point AuxPuntoB = new Point();
+                Point AuxPuntoA = new Point();
+
+                if ((e.Button == MouseButtons.Left) && (e.X < pctBox_Graph.Width && e.Y < pctBox_Graph.Height && e.Y >= 0 && e.X >= 0))
+                {
+
+                    AuxPuntoA = vect.Convert_Point(e.Location);
+
+                    txtTrianguloAx.Text = AuxPuntoA.X.ToString();
+                    txtTrianguloAy.Text = AuxPuntoA.Y.ToString();
+                }
+                else if ((e.Button == MouseButtons.Right) && (e.X < pctBox_Graph.Width && e.Y < pctBox_Graph.Height && e.Y >= 0 && e.X >= 0))
+                {
+
+                    AuxPuntoB = vect.Convert_Point(e.Location);
+
+                    txtTrianguloBx.Text = AuxPuntoB.X.ToString();
+                    txtTrianguloBy.Text = AuxPuntoB.Y.ToString();
+                }
             }
             else if (Panel_SubMenuDibujar .Visible == true){
-                //txtAxisX.Text = e.X.ToString();
-                //txtAxisY.Text = e.Y.ToString();
-
                 Point AuxPoint = new Point();
                 AuxPoint = vect.Convert_Point(e.Location);
 
@@ -556,10 +578,10 @@ namespace Vectores
 
         private void Btn_SubMenuRecta_Click(object sender, EventArgs e)
         {
-            //showSubMenu(Panel_SubMenuRecta);
+
         }
 
-        private void Btn_SubMenuCuadratica_Click(object sender, EventArgs e)
+        private void Btn_SubMenuCuadrado_Click(object sender, EventArgs e)
         {
             showSubMenu(Panel_SubMenuDibujarCuadrado);
         }
@@ -630,7 +652,7 @@ namespace Vectores
             {
                 int aX = Convert.ToInt32(txtCuadradoPuntoAx.Text);
                 int aY = Convert.ToInt32(txtCuadradoPuntoAy.Text);
-
+                
                 int bX = Convert.ToInt32(txtCuadradoPuntoBx.Text);
                 int bY = Convert.ToInt32(txtCuadradoPuntoBy.Text);
 
@@ -639,10 +661,10 @@ namespace Vectores
                 vect.DrawRectangle(pctBox_Graph, PuntoA, PuntoB);
 
                 #region Calcular Perimetro y Área
-                double perimetro = vect.Calcular_Perimetro(pctBox_Graph, PuntoA, PuntoB);
+                double perimetro = vect.Calcular_Perimetro(PuntoA, PuntoB, "cuadrado");
                 lblPerimetroCuadrado.Visible = true;
                 lblPerimetroCuadrado.Text = Math.Round(perimetro,2).ToString();
-                double area = vect.Calcular_Area(pctBox_Graph, PuntoA, PuntoB);
+                double area = vect.Calcular_Area(PuntoA, PuntoB, "cuadrado");
                 lblAreaCuadrado.Visible = true;
                 lblAreaCuadrado.Text = Math.Round(area,2).ToString();
 
@@ -661,5 +683,34 @@ namespace Vectores
             }
         }
 
+        private void Btn_SubMenuTriangulo_Click(object sender, EventArgs e)
+        {
+            showSubMenu(Panel_SubMenuDibujarTriangulo);
+        }
+
+        private void Btn_DibujarFigurasTriangulo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Panel_TrianguloDibujar.Visible = true;
+                lblBaseTriangulo.Visible = true;
+                lblAlturaTriangulo.Visible = true;
+                lblAreaTriangulo.Visible = true;
+                lblPerimetroTriangulo.Visible = true;
+
+                lblBaseTriangulo.Text = vect.datoAncho.ToString();
+                lblAlturaTriangulo.Text = vect.datoAlto.ToString();
+
+                Point PuntoA = new Point(int.Parse(txtTrianguloAx.Text), int.Parse(txtTrianguloAy.Text));
+                Point PuntoB = new Point(int.Parse(txtTrianguloBx.Text), int.Parse(txtTrianguloBy.Text));
+
+                lblPerimetroTriangulo.Text = vect.Calcular_Perimetro(PuntoA, PuntoB, "triangulo").ToString();
+                lblAreaTriangulo.Text = vect.Calcular_Area(PuntoA, PuntoB, "triangulo").ToString();
+                vect.DrawTriangle(pctBox_Graph, PuntoA, PuntoB);
+            }
+            catch (Exception)
+            {
+            }
+        }
     }
 }

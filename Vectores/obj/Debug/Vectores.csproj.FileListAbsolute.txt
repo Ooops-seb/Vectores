@@ -3,7 +3,6 @@ C:\Users\seb_3\OneDrive - UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\202251 - Oct22
 C:\Users\seb_3\OneDrive - UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\202251 - Oct22-Mar23\COMPUTACION GRAFICA\c#\Vectores\Vectores\bin\Debug\Vectores.pdb
 C:\Users\seb_3\OneDrive - UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\202251 - Oct22-Mar23\COMPUTACION GRAFICA\c#\Vectores\Vectores\obj\Debug\Vectores.csproj.AssemblyReference.cache
 C:\Users\seb_3\OneDrive - UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\202251 - Oct22-Mar23\COMPUTACION GRAFICA\c#\Vectores\Vectores\obj\Debug\Vectores.csproj.SuggestedBindingRedirects.cache
-C:\Users\seb_3\OneDrive - UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\202251 - Oct22-Mar23\COMPUTACION GRAFICA\c#\Vectores\Vectores\obj\Debug\Vectores.Frm_Vectores.resources
 C:\Users\seb_3\OneDrive - UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\202251 - Oct22-Mar23\COMPUTACION GRAFICA\c#\Vectores\Vectores\obj\Debug\Vectores.Properties.Resources.resources
 C:\Users\seb_3\OneDrive - UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\202251 - Oct22-Mar23\COMPUTACION GRAFICA\c#\Vectores\Vectores\obj\Debug\Vectores.csproj.GenerateResource.cache
 C:\Users\seb_3\OneDrive - UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\202251 - Oct22-Mar23\COMPUTACION GRAFICA\c#\Vectores\Vectores\obj\Debug\Vectores.csproj.CoreCompileInputs.cache
@@ -20,3 +19,4 @@ C:\Users\seb_3\Documents\GitHub\C#\Vectores\Vectores\obj\Debug\Vectores.csproj.G
 C:\Users\seb_3\Documents\GitHub\C#\Vectores\Vectores\obj\Debug\Vectores.csproj.CoreCompileInputs.cache
 C:\Users\seb_3\Documents\GitHub\C#\Vectores\Vectores\obj\Debug\Vectores.exe
 C:\Users\seb_3\Documents\GitHub\C#\Vectores\Vectores\obj\Debug\Vectores.pdb
+C:\Users\seb_3\OneDrive - UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE\202251 - Oct22-Mar23\COMPUTACION GRAFICA\C#\Vectores\Vectores\obj\Debug\Vectores.Frm_Vector.resources

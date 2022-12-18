@@ -16,7 +16,7 @@ namespace Vectores
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Vectores());
+            Application.Run(new Frm_Vector());
         }
     }
 }

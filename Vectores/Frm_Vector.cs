@@ -572,11 +572,6 @@ namespace Vectores
             }
         }
 
-        private void linkLabel_DibujarMouse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            pctBox_Graph.Cursor = System.Windows.Forms.Cursors.Cross;
-        }
-
         private void linkLabel_Animar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             try
@@ -591,7 +586,6 @@ namespace Vectores
                 float auxAngle = angle;
                 for (int i = 0; i < 100; i += 1)
                 {
-                    pctBox_Graph.Cursor = System.Windows.Forms.Cursors.WaitCursor;
                     auxAngle += angle;
                     auxX = Math.Round(mag * Math.Cos(auxAngle));
                     auxY = Math.Round(mag * Math.Sin(auxAngle));
@@ -599,7 +593,6 @@ namespace Vectores
                     vector.Draw_Origin(pctBox_Graph, PuntoAux);
                     Thread.Sleep(100);
                 }
-                pctBox_Graph.Cursor = System.Windows.Forms.Cursors.Cross;
             }
             catch(Exception msg)
             {

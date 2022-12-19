@@ -222,7 +222,6 @@ namespace Vectores
             this.BtnMenuOperations = new System.Windows.Forms.Button();
             this.Panel_SubMenuDibujar = new System.Windows.Forms.Panel();
             this.linkLabel_Animar = new System.Windows.Forms.LinkLabel();
-            this.linkLabel_DibujarMouse = new System.Windows.Forms.LinkLabel();
             this.Btn_DrawVector = new System.Windows.Forms.Button();
             this.txtAxisY = new System.Windows.Forms.TextBox();
             this.txtAxisX = new System.Windows.Forms.TextBox();
@@ -288,17 +287,18 @@ namespace Vectores
             // 
             this.groupBox1.Controls.Add(this.pictureBox_FreeDraw);
             this.groupBox1.Controls.Add(this.pctBox_Graph);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(306, 56);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(566, 593);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "PLANO 2D";
+            this.groupBox1.Text = "Plano";
             // 
             // pictureBox_FreeDraw
             // 
-            this.pictureBox_FreeDraw.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.pictureBox_FreeDraw.BackColor = System.Drawing.Color.White;
+            this.pictureBox_FreeDraw.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_FreeDraw.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox_FreeDraw.Location = new System.Drawing.Point(9, 28);
             this.pictureBox_FreeDraw.Name = "pictureBox_FreeDraw";
@@ -322,17 +322,17 @@ namespace Vectores
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Corinthia", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(30, 26);
+            this.label3.Location = new System.Drawing.Point(7, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 42);
+            this.label3.Size = new System.Drawing.Size(286, 62);
             this.label3.TabIndex = 5;
-            this.label3.Text = "VECTORES";
+            this.label3.Text = "Computación Gráfica";
             // 
             // Btn_ReDraw
             // 
-            this.Btn_ReDraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ReDraw.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_ReDraw.Location = new System.Drawing.Point(306, 21);
             this.Btn_ReDraw.Name = "Btn_ReDraw";
             this.Btn_ReDraw.Size = new System.Drawing.Size(96, 29);
@@ -344,7 +344,7 @@ namespace Vectores
             // 
             // PanelPrincipal
             // 
-            this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.PanelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(177)))), ((int)(((byte)(131)))));
             this.PanelPrincipal.Controls.Add(this.PanelMenu);
             this.PanelPrincipal.Controls.Add(this.PanelTitle);
             this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
@@ -370,7 +370,7 @@ namespace Vectores
             // 
             // Panel_SubMenuDibujoLibre
             // 
-            this.Panel_SubMenuDibujoLibre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
+            this.Panel_SubMenuDibujoLibre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.Panel_SubMenuDibujoLibre.Controls.Add(this.label52);
             this.Panel_SubMenuDibujoLibre.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_SubMenuDibujoLibre.Location = new System.Drawing.Point(0, 2285);
@@ -382,22 +382,23 @@ namespace Vectores
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(57, 20);
+            this.label52.Font = new System.Drawing.Font("Corinthia", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label52.Location = new System.Drawing.Point(50, 13);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(186, 16);
+            this.label52.Size = new System.Drawing.Size(184, 38);
             this.label52.TabIndex = 18;
-            this.label52.Text = "¡DIBUJE CON CREATIVIDAD!";
+            this.label52.Text = "¡Dibuje con el corazón!";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Btn_MenuDibujoLibre
             // 
-            this.Btn_MenuDibujoLibre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(31)))));
+            this.Btn_MenuDibujoLibre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(111)))), ((int)(((byte)(185)))));
             this.Btn_MenuDibujoLibre.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_MenuDibujoLibre.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
             this.Btn_MenuDibujoLibre.FlatAppearance.BorderSize = 0;
             this.Btn_MenuDibujoLibre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_MenuDibujoLibre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_MenuDibujoLibre.Font = new System.Drawing.Font("Source Sans Pro", 15.75F, System.Drawing.FontStyle.Bold);
             this.Btn_MenuDibujoLibre.ForeColor = System.Drawing.Color.White;
             this.Btn_MenuDibujoLibre.Location = new System.Drawing.Point(0, 2245);
             this.Btn_MenuDibujoLibre.Name = "Btn_MenuDibujoLibre";
@@ -426,6 +427,7 @@ namespace Vectores
             // 
             // Panel_SubMenuDibujarCuadrado
             // 
+            this.Panel_SubMenuDibujarCuadrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.Btn_DibujarFigurasCuadrado);
             this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.Panel_CuadradoDibujar);
             this.Panel_SubMenuDibujarCuadrado.Controls.Add(this.groupBox13);
@@ -440,7 +442,7 @@ namespace Vectores
             // 
             // Btn_DibujarFigurasCuadrado
             // 
-            this.Btn_DibujarFigurasCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_DibujarFigurasCuadrado.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_DibujarFigurasCuadrado.Location = new System.Drawing.Point(105, 148);
             this.Btn_DibujarFigurasCuadrado.Name = "Btn_DibujarFigurasCuadrado";
             this.Btn_DibujarFigurasCuadrado.Size = new System.Drawing.Size(68, 26);
@@ -451,6 +453,7 @@ namespace Vectores
             // 
             // Panel_CuadradoDibujar
             // 
+            this.Panel_CuadradoDibujar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.Panel_CuadradoDibujar.Controls.Add(this.lblAlturaCuadrado);
             this.Panel_CuadradoDibujar.Controls.Add(this.lblBaseCuadrado);
             this.Panel_CuadradoDibujar.Controls.Add(this.label60);
@@ -470,11 +473,11 @@ namespace Vectores
             // lblAlturaCuadrado
             // 
             this.lblAlturaCuadrado.AutoSize = true;
-            this.lblAlturaCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlturaCuadrado.ForeColor = System.Drawing.Color.Black;
+            this.lblAlturaCuadrado.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblAlturaCuadrado.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblAlturaCuadrado.Location = new System.Drawing.Point(193, 30);
             this.lblAlturaCuadrado.Name = "lblAlturaCuadrado";
-            this.lblAlturaCuadrado.Size = new System.Drawing.Size(41, 16);
+            this.lblAlturaCuadrado.Size = new System.Drawing.Size(41, 17);
             this.lblAlturaCuadrado.TabIndex = 48;
             this.lblAlturaCuadrado.Text = "Altura";
             this.lblAlturaCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -483,11 +486,11 @@ namespace Vectores
             // lblBaseCuadrado
             // 
             this.lblBaseCuadrado.AutoSize = true;
-            this.lblBaseCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaseCuadrado.ForeColor = System.Drawing.Color.Black;
+            this.lblBaseCuadrado.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblBaseCuadrado.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblBaseCuadrado.Location = new System.Drawing.Point(81, 30);
             this.lblBaseCuadrado.Name = "lblBaseCuadrado";
-            this.lblBaseCuadrado.Size = new System.Drawing.Size(39, 16);
+            this.lblBaseCuadrado.Size = new System.Drawing.Size(34, 17);
             this.lblBaseCuadrado.TabIndex = 47;
             this.lblBaseCuadrado.Text = "Base";
             this.lblBaseCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -496,11 +499,11 @@ namespace Vectores
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.Black;
+            this.label60.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label60.Location = new System.Drawing.Point(143, 30);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(44, 16);
+            this.label60.Size = new System.Drawing.Size(47, 17);
             this.label60.TabIndex = 46;
             this.label60.Text = "Altura:";
             this.label60.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -508,11 +511,11 @@ namespace Vectores
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.Black;
+            this.label59.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label59.Location = new System.Drawing.Point(34, 30);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(42, 16);
+            this.label59.Size = new System.Drawing.Size(40, 17);
             this.label59.TabIndex = 45;
             this.label59.Text = "Base:";
             this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -520,11 +523,11 @@ namespace Vectores
             // lblAreaCuadrado
             // 
             this.lblAreaCuadrado.AutoSize = true;
-            this.lblAreaCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAreaCuadrado.ForeColor = System.Drawing.Color.Black;
+            this.lblAreaCuadrado.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblAreaCuadrado.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblAreaCuadrado.Location = new System.Drawing.Point(114, 80);
             this.lblAreaCuadrado.Name = "lblAreaCuadrado";
-            this.lblAreaCuadrado.Size = new System.Drawing.Size(39, 16);
+            this.lblAreaCuadrado.Size = new System.Drawing.Size(36, 17);
             this.lblAreaCuadrado.TabIndex = 44;
             this.lblAreaCuadrado.Text = "Área:";
             this.lblAreaCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -533,11 +536,11 @@ namespace Vectores
             // lblPerimetroCuadrado
             // 
             this.lblPerimetroCuadrado.AutoSize = true;
-            this.lblPerimetroCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerimetroCuadrado.ForeColor = System.Drawing.Color.Black;
+            this.lblPerimetroCuadrado.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblPerimetroCuadrado.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblPerimetroCuadrado.Location = new System.Drawing.Point(114, 58);
             this.lblPerimetroCuadrado.Name = "lblPerimetroCuadrado";
-            this.lblPerimetroCuadrado.Size = new System.Drawing.Size(68, 16);
+            this.lblPerimetroCuadrado.Size = new System.Drawing.Size(65, 17);
             this.lblPerimetroCuadrado.TabIndex = 43;
             this.lblPerimetroCuadrado.Text = "Perímetro:";
             this.lblPerimetroCuadrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -546,11 +549,11 @@ namespace Vectores
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.Black;
+            this.label58.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label58.Location = new System.Drawing.Point(15, 80);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(39, 16);
+            this.label58.Size = new System.Drawing.Size(38, 17);
             this.label58.TabIndex = 42;
             this.label58.Text = "Área:";
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -558,11 +561,11 @@ namespace Vectores
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.Black;
+            this.label57.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label57.Location = new System.Drawing.Point(15, 58);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(68, 16);
+            this.label57.Size = new System.Drawing.Size(70, 17);
             this.label57.TabIndex = 41;
             this.label57.Text = "Perímetro:";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -570,10 +573,11 @@ namespace Vectores
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label71.Location = new System.Drawing.Point(68, 10);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(151, 16);
+            this.label71.Size = new System.Drawing.Size(141, 19);
             this.label71.TabIndex = 17;
             this.label71.Text = "Detalles de la figura:";
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -584,7 +588,8 @@ namespace Vectores
             this.groupBox13.Controls.Add(this.label53);
             this.groupBox13.Controls.Add(this.label54);
             this.groupBox13.Controls.Add(this.txtCuadradoPuntoBx);
-            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox13.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox13.Location = new System.Drawing.Point(149, 45);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(123, 88);
@@ -596,7 +601,7 @@ namespace Vectores
             // 
             this.txtCuadradoPuntoBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtCuadradoPuntoBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCuadradoPuntoBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuadradoPuntoBy.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtCuadradoPuntoBy.Location = new System.Drawing.Point(48, 59);
             this.txtCuadradoPuntoBy.Name = "txtCuadradoPuntoBy";
             this.txtCuadradoPuntoBy.Size = new System.Drawing.Size(35, 19);
@@ -606,22 +611,22 @@ namespace Vectores
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.Color.White;
+            this.label53.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label53.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label53.Location = new System.Drawing.Point(13, 31);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(18, 16);
+            this.label53.Size = new System.Drawing.Size(18, 17);
             this.label53.TabIndex = 14;
             this.label53.Text = "X:";
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.White;
+            this.label54.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label54.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label54.Location = new System.Drawing.Point(13, 59);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(19, 16);
+            this.label54.Size = new System.Drawing.Size(17, 17);
             this.label54.TabIndex = 15;
             this.label54.Text = "Y:";
             // 
@@ -629,7 +634,7 @@ namespace Vectores
             // 
             this.txtCuadradoPuntoBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtCuadradoPuntoBx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCuadradoPuntoBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuadradoPuntoBx.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtCuadradoPuntoBx.Location = new System.Drawing.Point(48, 31);
             this.txtCuadradoPuntoBx.Name = "txtCuadradoPuntoBx";
             this.txtCuadradoPuntoBx.Size = new System.Drawing.Size(35, 19);
@@ -642,7 +647,8 @@ namespace Vectores
             this.groupBox14.Controls.Add(this.label55);
             this.groupBox14.Controls.Add(this.txtCuadradoPuntoAx);
             this.groupBox14.Controls.Add(this.label56);
-            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox14.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox14.Location = new System.Drawing.Point(6, 45);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(123, 88);
@@ -654,7 +660,7 @@ namespace Vectores
             // 
             this.txtCuadradoPuntoAy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtCuadradoPuntoAy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCuadradoPuntoAy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuadradoPuntoAy.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtCuadradoPuntoAy.Location = new System.Drawing.Point(57, 59);
             this.txtCuadradoPuntoAy.Name = "txtCuadradoPuntoAy";
             this.txtCuadradoPuntoAy.Size = new System.Drawing.Size(35, 19);
@@ -664,11 +670,11 @@ namespace Vectores
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.ForeColor = System.Drawing.Color.White;
+            this.label55.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label55.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label55.Location = new System.Drawing.Point(22, 31);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(18, 16);
+            this.label55.Size = new System.Drawing.Size(18, 17);
             this.label55.TabIndex = 10;
             this.label55.Text = "X:";
             // 
@@ -676,7 +682,7 @@ namespace Vectores
             // 
             this.txtCuadradoPuntoAx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtCuadradoPuntoAx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCuadradoPuntoAx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuadradoPuntoAx.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtCuadradoPuntoAx.Location = new System.Drawing.Point(57, 31);
             this.txtCuadradoPuntoAx.Name = "txtCuadradoPuntoAx";
             this.txtCuadradoPuntoAx.Size = new System.Drawing.Size(35, 19);
@@ -686,34 +692,35 @@ namespace Vectores
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.Color.White;
+            this.label56.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label56.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label56.Location = new System.Drawing.Point(22, 59);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(19, 16);
+            this.label56.Size = new System.Drawing.Size(17, 17);
             this.label56.TabIndex = 11;
             this.label56.Text = "Y:";
             // 
             // label73
             // 
             this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label73.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label73.Location = new System.Drawing.Point(82, 17);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(121, 16);
+            this.label73.Size = new System.Drawing.Size(108, 17);
             this.label73.TabIndex = 17;
             this.label73.Text = "Seleccione puntos:";
             this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Btn_SubMenuCuadrado
             // 
-            this.Btn_SubMenuCuadrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(118)))), ((int)(((byte)(37)))));
+            this.Btn_SubMenuCuadrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(174)))), ((int)(((byte)(209)))));
             this.Btn_SubMenuCuadrado.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_SubMenuCuadrado.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.Btn_SubMenuCuadrado.FlatAppearance.BorderSize = 0;
             this.Btn_SubMenuCuadrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SubMenuCuadrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_SubMenuCuadrado.ForeColor = System.Drawing.Color.White;
+            this.Btn_SubMenuCuadrado.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_SubMenuCuadrado.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Btn_SubMenuCuadrado.Location = new System.Drawing.Point(0, 730);
             this.Btn_SubMenuCuadrado.Name = "Btn_SubMenuCuadrado";
             this.Btn_SubMenuCuadrado.Size = new System.Drawing.Size(283, 30);
@@ -724,6 +731,7 @@ namespace Vectores
             // 
             // Panel_SubMenuDibujarTriangulo
             // 
+            this.Panel_SubMenuDibujarTriangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.Panel_SubMenuDibujarTriangulo.Controls.Add(this.Btn_DibujarFigurasTriangulo);
             this.Panel_SubMenuDibujarTriangulo.Controls.Add(this.Panel_TrianguloDibujar);
             this.Panel_SubMenuDibujarTriangulo.Controls.Add(this.groupBox15);
@@ -738,7 +746,7 @@ namespace Vectores
             // 
             // Btn_DibujarFigurasTriangulo
             // 
-            this.Btn_DibujarFigurasTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_DibujarFigurasTriangulo.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_DibujarFigurasTriangulo.Location = new System.Drawing.Point(105, 148);
             this.Btn_DibujarFigurasTriangulo.Name = "Btn_DibujarFigurasTriangulo";
             this.Btn_DibujarFigurasTriangulo.Size = new System.Drawing.Size(68, 26);
@@ -768,11 +776,11 @@ namespace Vectores
             // lblAlturaTriangulo
             // 
             this.lblAlturaTriangulo.AutoSize = true;
-            this.lblAlturaTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlturaTriangulo.ForeColor = System.Drawing.Color.Black;
+            this.lblAlturaTriangulo.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblAlturaTriangulo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblAlturaTriangulo.Location = new System.Drawing.Point(193, 30);
             this.lblAlturaTriangulo.Name = "lblAlturaTriangulo";
-            this.lblAlturaTriangulo.Size = new System.Drawing.Size(41, 16);
+            this.lblAlturaTriangulo.Size = new System.Drawing.Size(41, 17);
             this.lblAlturaTriangulo.TabIndex = 48;
             this.lblAlturaTriangulo.Text = "Altura";
             this.lblAlturaTriangulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -781,11 +789,11 @@ namespace Vectores
             // lblBaseTriangulo
             // 
             this.lblBaseTriangulo.AutoSize = true;
-            this.lblBaseTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBaseTriangulo.ForeColor = System.Drawing.Color.Black;
+            this.lblBaseTriangulo.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblBaseTriangulo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblBaseTriangulo.Location = new System.Drawing.Point(81, 30);
             this.lblBaseTriangulo.Name = "lblBaseTriangulo";
-            this.lblBaseTriangulo.Size = new System.Drawing.Size(39, 16);
+            this.lblBaseTriangulo.Size = new System.Drawing.Size(34, 17);
             this.lblBaseTriangulo.TabIndex = 47;
             this.lblBaseTriangulo.Text = "Base";
             this.lblBaseTriangulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -794,11 +802,11 @@ namespace Vectores
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.ForeColor = System.Drawing.Color.Black;
+            this.label63.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label63.Location = new System.Drawing.Point(143, 30);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(44, 16);
+            this.label63.Size = new System.Drawing.Size(47, 17);
             this.label63.TabIndex = 46;
             this.label63.Text = "Altura:";
             this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -806,11 +814,11 @@ namespace Vectores
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ForeColor = System.Drawing.Color.Black;
+            this.label64.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label64.Location = new System.Drawing.Point(34, 30);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(42, 16);
+            this.label64.Size = new System.Drawing.Size(40, 17);
             this.label64.TabIndex = 45;
             this.label64.Text = "Base:";
             this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -818,11 +826,11 @@ namespace Vectores
             // lblAreaTriangulo
             // 
             this.lblAreaTriangulo.AutoSize = true;
-            this.lblAreaTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAreaTriangulo.ForeColor = System.Drawing.Color.Black;
+            this.lblAreaTriangulo.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblAreaTriangulo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblAreaTriangulo.Location = new System.Drawing.Point(114, 80);
             this.lblAreaTriangulo.Name = "lblAreaTriangulo";
-            this.lblAreaTriangulo.Size = new System.Drawing.Size(39, 16);
+            this.lblAreaTriangulo.Size = new System.Drawing.Size(36, 17);
             this.lblAreaTriangulo.TabIndex = 44;
             this.lblAreaTriangulo.Text = "Área:";
             this.lblAreaTriangulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -831,11 +839,11 @@ namespace Vectores
             // lblPerimetroTriangulo
             // 
             this.lblPerimetroTriangulo.AutoSize = true;
-            this.lblPerimetroTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerimetroTriangulo.ForeColor = System.Drawing.Color.Black;
+            this.lblPerimetroTriangulo.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblPerimetroTriangulo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblPerimetroTriangulo.Location = new System.Drawing.Point(114, 58);
             this.lblPerimetroTriangulo.Name = "lblPerimetroTriangulo";
-            this.lblPerimetroTriangulo.Size = new System.Drawing.Size(68, 16);
+            this.lblPerimetroTriangulo.Size = new System.Drawing.Size(65, 17);
             this.lblPerimetroTriangulo.TabIndex = 43;
             this.lblPerimetroTriangulo.Text = "Perímetro:";
             this.lblPerimetroTriangulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -844,11 +852,11 @@ namespace Vectores
             // label67
             // 
             this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ForeColor = System.Drawing.Color.Black;
+            this.label67.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label67.Location = new System.Drawing.Point(15, 80);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(39, 16);
+            this.label67.Size = new System.Drawing.Size(38, 17);
             this.label67.TabIndex = 42;
             this.label67.Text = "Área:";
             this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -856,11 +864,11 @@ namespace Vectores
             // label68
             // 
             this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.Color.Black;
+            this.label68.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label68.Location = new System.Drawing.Point(15, 58);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(68, 16);
+            this.label68.Size = new System.Drawing.Size(70, 17);
             this.label68.TabIndex = 41;
             this.label68.Text = "Perímetro:";
             this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -868,10 +876,11 @@ namespace Vectores
             // label69
             // 
             this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label69.Location = new System.Drawing.Point(68, 10);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(151, 16);
+            this.label69.Size = new System.Drawing.Size(141, 19);
             this.label69.TabIndex = 17;
             this.label69.Text = "Detalles de la figura:";
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -882,7 +891,8 @@ namespace Vectores
             this.groupBox15.Controls.Add(this.label70);
             this.groupBox15.Controls.Add(this.label72);
             this.groupBox15.Controls.Add(this.txtTrianguloBx);
-            this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox15.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox15.Location = new System.Drawing.Point(149, 45);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(123, 88);
@@ -894,7 +904,7 @@ namespace Vectores
             // 
             this.txtTrianguloBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtTrianguloBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTrianguloBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrianguloBy.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtTrianguloBy.Location = new System.Drawing.Point(48, 59);
             this.txtTrianguloBy.Name = "txtTrianguloBy";
             this.txtTrianguloBy.Size = new System.Drawing.Size(53, 19);
@@ -904,22 +914,22 @@ namespace Vectores
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ForeColor = System.Drawing.Color.White;
+            this.label70.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label70.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label70.Location = new System.Drawing.Point(13, 31);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(18, 16);
+            this.label70.Size = new System.Drawing.Size(18, 17);
             this.label70.TabIndex = 14;
             this.label70.Text = "X:";
             // 
             // label72
             // 
             this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ForeColor = System.Drawing.Color.White;
+            this.label72.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label72.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label72.Location = new System.Drawing.Point(13, 59);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(19, 16);
+            this.label72.Size = new System.Drawing.Size(17, 17);
             this.label72.TabIndex = 15;
             this.label72.Text = "Y:";
             // 
@@ -927,7 +937,7 @@ namespace Vectores
             // 
             this.txtTrianguloBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtTrianguloBx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTrianguloBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrianguloBx.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtTrianguloBx.Location = new System.Drawing.Point(48, 31);
             this.txtTrianguloBx.Name = "txtTrianguloBx";
             this.txtTrianguloBx.Size = new System.Drawing.Size(53, 19);
@@ -940,7 +950,8 @@ namespace Vectores
             this.groupBox16.Controls.Add(this.label77);
             this.groupBox16.Controls.Add(this.txtTrianguloAx);
             this.groupBox16.Controls.Add(this.label78);
-            this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox16.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox16.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox16.Location = new System.Drawing.Point(6, 45);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(123, 88);
@@ -952,7 +963,7 @@ namespace Vectores
             // 
             this.txtTrianguloAy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtTrianguloAy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTrianguloAy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrianguloAy.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtTrianguloAy.Location = new System.Drawing.Point(57, 59);
             this.txtTrianguloAy.Name = "txtTrianguloAy";
             this.txtTrianguloAy.Size = new System.Drawing.Size(53, 19);
@@ -962,11 +973,11 @@ namespace Vectores
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label77.ForeColor = System.Drawing.Color.White;
+            this.label77.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label77.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label77.Location = new System.Drawing.Point(22, 31);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(18, 16);
+            this.label77.Size = new System.Drawing.Size(18, 17);
             this.label77.TabIndex = 10;
             this.label77.Text = "X:";
             // 
@@ -974,7 +985,7 @@ namespace Vectores
             // 
             this.txtTrianguloAx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtTrianguloAx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTrianguloAx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrianguloAx.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtTrianguloAx.Location = new System.Drawing.Point(57, 31);
             this.txtTrianguloAx.Name = "txtTrianguloAx";
             this.txtTrianguloAx.Size = new System.Drawing.Size(53, 19);
@@ -984,34 +995,35 @@ namespace Vectores
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label78.ForeColor = System.Drawing.Color.White;
+            this.label78.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label78.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label78.Location = new System.Drawing.Point(22, 59);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(19, 16);
+            this.label78.Size = new System.Drawing.Size(17, 17);
             this.label78.TabIndex = 11;
             this.label78.Text = "Y:";
             // 
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label79.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label79.Location = new System.Drawing.Point(82, 17);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(121, 16);
+            this.label79.Size = new System.Drawing.Size(108, 17);
             this.label79.TabIndex = 17;
             this.label79.Text = "Seleccione puntos:";
             this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Btn_SubMenuTriangulo
             // 
-            this.Btn_SubMenuTriangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(118)))), ((int)(((byte)(37)))));
+            this.Btn_SubMenuTriangulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(174)))), ((int)(((byte)(209)))));
             this.Btn_SubMenuTriangulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_SubMenuTriangulo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.Btn_SubMenuTriangulo.FlatAppearance.BorderSize = 0;
             this.Btn_SubMenuTriangulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SubMenuTriangulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_SubMenuTriangulo.ForeColor = System.Drawing.Color.White;
+            this.Btn_SubMenuTriangulo.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_SubMenuTriangulo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Btn_SubMenuTriangulo.Location = new System.Drawing.Point(0, 410);
             this.Btn_SubMenuTriangulo.Name = "Btn_SubMenuTriangulo";
             this.Btn_SubMenuTriangulo.Size = new System.Drawing.Size(283, 30);
@@ -1022,6 +1034,7 @@ namespace Vectores
             // 
             // Panel_SubMenuRecta
             // 
+            this.Panel_SubMenuRecta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.Panel_SubMenuRecta.Controls.Add(this.groupBox11);
             this.Panel_SubMenuRecta.Controls.Add(this.groupBox10);
             this.Panel_SubMenuRecta.Controls.Add(this.btn_CalcularEcuacionRecta);
@@ -1039,8 +1052,8 @@ namespace Vectores
             this.groupBox11.Controls.Add(this.label51);
             this.groupBox11.Controls.Add(this.groupBox12);
             this.groupBox11.Controls.Add(this.label48);
-            this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.ForeColor = System.Drawing.Color.White;
+            this.groupBox11.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox11.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox11.Location = new System.Drawing.Point(3, 219);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(272, 155);
@@ -1052,7 +1065,7 @@ namespace Vectores
             // 
             this.txtPendiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtPendiente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPendiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPendiente.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtPendiente.Location = new System.Drawing.Point(103, 25);
             this.txtPendiente.Name = "txtPendiente";
             this.txtPendiente.Size = new System.Drawing.Size(35, 19);
@@ -1063,7 +1076,7 @@ namespace Vectores
             // 
             this.txtAngle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtAngle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAngle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAngle.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtAngle.Location = new System.Drawing.Point(163, 124);
             this.txtAngle.Name = "txtAngle";
             this.txtAngle.Size = new System.Drawing.Size(35, 19);
@@ -1073,11 +1086,11 @@ namespace Vectores
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.Color.Black;
+            this.label51.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label51.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label51.Location = new System.Drawing.Point(24, 127);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(133, 16);
+            this.label51.Size = new System.Drawing.Size(121, 17);
             this.label51.TabIndex = 40;
             this.label51.Text = "Ángulo respecto a X: ";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1088,7 +1101,8 @@ namespace Vectores
             this.groupBox12.Controls.Add(this.label49);
             this.groupBox12.Controls.Add(this.txtPuntoX);
             this.groupBox12.Controls.Add(this.label50);
-            this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox12.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox12.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox12.Location = new System.Drawing.Point(24, 52);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(205, 62);
@@ -1100,7 +1114,7 @@ namespace Vectores
             // 
             this.txtPuntoY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtPuntoY.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPuntoY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntoY.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtPuntoY.Location = new System.Drawing.Point(149, 34);
             this.txtPuntoY.Name = "txtPuntoY";
             this.txtPuntoY.Size = new System.Drawing.Size(35, 19);
@@ -1110,11 +1124,11 @@ namespace Vectores
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.White;
+            this.label49.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label49.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label49.Location = new System.Drawing.Point(22, 31);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(18, 16);
+            this.label49.Size = new System.Drawing.Size(18, 17);
             this.label49.TabIndex = 10;
             this.label49.Text = "X:";
             // 
@@ -1122,7 +1136,7 @@ namespace Vectores
             // 
             this.txtPuntoX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtPuntoX.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPuntoX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntoX.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtPuntoX.Location = new System.Drawing.Point(57, 31);
             this.txtPuntoX.Name = "txtPuntoX";
             this.txtPuntoX.Size = new System.Drawing.Size(35, 19);
@@ -1132,22 +1146,22 @@ namespace Vectores
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.Color.White;
+            this.label50.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label50.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label50.Location = new System.Drawing.Point(114, 34);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(19, 16);
+            this.label50.Size = new System.Drawing.Size(17, 17);
             this.label50.TabIndex = 11;
             this.label50.Text = "Y:";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.Black;
+            this.label48.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label48.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label48.Location = new System.Drawing.Point(25, 25);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(74, 16);
+            this.label48.Size = new System.Drawing.Size(67, 17);
             this.label48.TabIndex = 33;
             this.label48.Text = "Pendiente: ";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1172,7 +1186,8 @@ namespace Vectores
             this.groupBox8.Controls.Add(this.label39);
             this.groupBox8.Controls.Add(this.label42);
             this.groupBox8.Controls.Add(this.txtPuntoBx);
-            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox8.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox8.Location = new System.Drawing.Point(146, 88);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(123, 88);
@@ -1184,7 +1199,7 @@ namespace Vectores
             // 
             this.txtPuntoBy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtPuntoBy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPuntoBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntoBy.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtPuntoBy.Location = new System.Drawing.Point(48, 59);
             this.txtPuntoBy.Name = "txtPuntoBy";
             this.txtPuntoBy.Size = new System.Drawing.Size(35, 19);
@@ -1194,22 +1209,22 @@ namespace Vectores
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.White;
+            this.label39.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label39.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label39.Location = new System.Drawing.Point(13, 31);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(18, 16);
+            this.label39.Size = new System.Drawing.Size(18, 17);
             this.label39.TabIndex = 14;
             this.label39.Text = "X:";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.White;
+            this.label42.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label42.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label42.Location = new System.Drawing.Point(13, 59);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(19, 16);
+            this.label42.Size = new System.Drawing.Size(17, 17);
             this.label42.TabIndex = 15;
             this.label42.Text = "Y:";
             // 
@@ -1217,7 +1232,7 @@ namespace Vectores
             // 
             this.txtPuntoBx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtPuntoBx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPuntoBx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntoBx.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtPuntoBx.Location = new System.Drawing.Point(48, 31);
             this.txtPuntoBx.Name = "txtPuntoBx";
             this.txtPuntoBx.Size = new System.Drawing.Size(35, 19);
@@ -1230,7 +1245,8 @@ namespace Vectores
             this.groupBox9.Controls.Add(this.label46);
             this.groupBox9.Controls.Add(this.txtPuntoAx);
             this.groupBox9.Controls.Add(this.label47);
-            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox9.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox9.Location = new System.Drawing.Point(3, 88);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(123, 88);
@@ -1242,7 +1258,7 @@ namespace Vectores
             // 
             this.txtPuntoAy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtPuntoAy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPuntoAy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntoAy.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtPuntoAy.Location = new System.Drawing.Point(57, 59);
             this.txtPuntoAy.Name = "txtPuntoAy";
             this.txtPuntoAy.Size = new System.Drawing.Size(35, 19);
@@ -1252,11 +1268,11 @@ namespace Vectores
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.White;
+            this.label46.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label46.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label46.Location = new System.Drawing.Point(22, 31);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(18, 16);
+            this.label46.Size = new System.Drawing.Size(18, 17);
             this.label46.TabIndex = 10;
             this.label46.Text = "X:";
             // 
@@ -1264,7 +1280,7 @@ namespace Vectores
             // 
             this.txtPuntoAx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtPuntoAx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPuntoAx.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuntoAx.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtPuntoAx.Location = new System.Drawing.Point(57, 31);
             this.txtPuntoAx.Name = "txtPuntoAx";
             this.txtPuntoAx.Size = new System.Drawing.Size(35, 19);
@@ -1274,11 +1290,11 @@ namespace Vectores
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.White;
+            this.label47.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label47.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label47.Location = new System.Drawing.Point(22, 59);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(19, 16);
+            this.label47.Size = new System.Drawing.Size(17, 17);
             this.label47.TabIndex = 11;
             this.label47.Text = "Y:";
             // 
@@ -1290,7 +1306,8 @@ namespace Vectores
             this.boxEcuacion.Controls.Add(this.label74);
             this.boxEcuacion.Controls.Add(this.txtEcuacionX);
             this.boxEcuacion.Controls.Add(this.label75);
-            this.boxEcuacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxEcuacion.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.boxEcuacion.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.boxEcuacion.Location = new System.Drawing.Point(15, 21);
             this.boxEcuacion.Name = "boxEcuacion";
             this.boxEcuacion.Size = new System.Drawing.Size(243, 61);
@@ -1302,21 +1319,21 @@ namespace Vectores
             // 
             this.txtEcuacionB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtEcuacionB.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEcuacionB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEcuacionB.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtEcuacionB.Location = new System.Drawing.Point(146, 30);
             this.txtEcuacionB.Name = "txtEcuacionB";
-            this.txtEcuacionB.Size = new System.Drawing.Size(30, 15);
+            this.txtEcuacionB.Size = new System.Drawing.Size(30, 19);
             this.txtEcuacionB.TabIndex = 15;
             this.txtEcuacionB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label76.ForeColor = System.Drawing.Color.White;
+            this.label76.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label76.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label76.Location = new System.Drawing.Point(187, 29);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(27, 16);
+            this.label76.Size = new System.Drawing.Size(26, 17);
             this.label76.TabIndex = 14;
             this.label76.Text = "=  0";
             // 
@@ -1324,21 +1341,21 @@ namespace Vectores
             // 
             this.txtEcuacionY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtEcuacionY.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEcuacionY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEcuacionY.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtEcuacionY.Location = new System.Drawing.Point(81, 30);
             this.txtEcuacionY.Name = "txtEcuacionY";
-            this.txtEcuacionY.Size = new System.Drawing.Size(30, 15);
+            this.txtEcuacionY.Size = new System.Drawing.Size(30, 19);
             this.txtEcuacionY.TabIndex = 13;
             this.txtEcuacionY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.ForeColor = System.Drawing.Color.White;
+            this.label74.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label74.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label74.Location = new System.Drawing.Point(50, 29);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(26, 16);
+            this.label74.Size = new System.Drawing.Size(26, 17);
             this.label74.TabIndex = 10;
             this.label74.Text = "x  +";
             // 
@@ -1346,27 +1363,27 @@ namespace Vectores
             // 
             this.txtEcuacionX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtEcuacionX.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEcuacionX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEcuacionX.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtEcuacionX.Location = new System.Drawing.Point(14, 30);
             this.txtEcuacionX.Name = "txtEcuacionX";
-            this.txtEcuacionX.Size = new System.Drawing.Size(30, 15);
+            this.txtEcuacionX.Size = new System.Drawing.Size(30, 19);
             this.txtEcuacionX.TabIndex = 12;
             this.txtEcuacionX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label75.ForeColor = System.Drawing.Color.White;
+            this.label75.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label75.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label75.Location = new System.Drawing.Point(117, 29);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(27, 16);
+            this.label75.Size = new System.Drawing.Size(26, 17);
             this.label75.TabIndex = 11;
             this.label75.Text = "y  +";
             // 
             // btn_CalcularEcuacionRecta
             // 
-            this.btn_CalcularEcuacionRecta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CalcularEcuacionRecta.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.btn_CalcularEcuacionRecta.Location = new System.Drawing.Point(105, 193);
             this.btn_CalcularEcuacionRecta.Name = "btn_CalcularEcuacionRecta";
             this.btn_CalcularEcuacionRecta.Size = new System.Drawing.Size(68, 26);
@@ -1377,13 +1394,13 @@ namespace Vectores
             // 
             // Btn_SubMenuRecta
             // 
-            this.Btn_SubMenuRecta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(118)))), ((int)(((byte)(37)))));
+            this.Btn_SubMenuRecta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(174)))), ((int)(((byte)(209)))));
             this.Btn_SubMenuRecta.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_SubMenuRecta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.Btn_SubMenuRecta.FlatAppearance.BorderSize = 0;
             this.Btn_SubMenuRecta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SubMenuRecta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_SubMenuRecta.ForeColor = System.Drawing.Color.White;
+            this.Btn_SubMenuRecta.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_SubMenuRecta.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Btn_SubMenuRecta.Location = new System.Drawing.Point(0, 0);
             this.Btn_SubMenuRecta.Name = "Btn_SubMenuRecta";
             this.Btn_SubMenuRecta.Size = new System.Drawing.Size(283, 30);
@@ -1394,12 +1411,12 @@ namespace Vectores
             // 
             // Btn_DibujarFiguras
             // 
-            this.Btn_DibujarFiguras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.Btn_DibujarFiguras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(111)))), ((int)(((byte)(185)))));
             this.Btn_DibujarFiguras.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_DibujarFiguras.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
             this.Btn_DibujarFiguras.FlatAppearance.BorderSize = 0;
             this.Btn_DibujarFiguras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_DibujarFiguras.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_DibujarFiguras.Font = new System.Drawing.Font("Source Sans Pro", 15.75F, System.Drawing.FontStyle.Bold);
             this.Btn_DibujarFiguras.ForeColor = System.Drawing.Color.White;
             this.Btn_DibujarFiguras.Location = new System.Drawing.Point(0, 1155);
             this.Btn_DibujarFiguras.Name = "Btn_DibujarFiguras";
@@ -1456,6 +1473,7 @@ namespace Vectores
             // 
             // PanelProductoVector
             // 
+            this.PanelProductoVector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.PanelProductoVector.Controls.Add(this.lblResultadoProducto);
             this.PanelProductoVector.Controls.Add(this.label45);
             this.PanelProductoVector.Controls.Add(this.label44);
@@ -1481,10 +1499,11 @@ namespace Vectores
             // lblResultadoProducto
             // 
             this.lblResultadoProducto.AutoSize = true;
-            this.lblResultadoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoProducto.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblResultadoProducto.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblResultadoProducto.Location = new System.Drawing.Point(155, 65);
             this.lblResultadoProducto.Name = "lblResultadoProducto";
-            this.lblResultadoProducto.Size = new System.Drawing.Size(13, 16);
+            this.lblResultadoProducto.Size = new System.Drawing.Size(14, 17);
             this.lblResultadoProducto.TabIndex = 34;
             this.lblResultadoProducto.Text = "x";
             this.lblResultadoProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1493,10 +1512,11 @@ namespace Vectores
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label45.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label45.Location = new System.Drawing.Point(77, 65);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(63, 16);
+            this.label45.Size = new System.Drawing.Size(57, 17);
             this.label45.TabIndex = 33;
             this.label45.Text = "V1 * V2  =";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1504,10 +1524,11 @@ namespace Vectores
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(44, 37);
+            this.label44.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label44.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label44.Location = new System.Drawing.Point(19, 37);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(63, 16);
+            this.label44.Size = new System.Drawing.Size(57, 17);
             this.label44.TabIndex = 32;
             this.label44.Text = "V1 * V2  =";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1515,10 +1536,11 @@ namespace Vectores
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(175, 37);
+            this.label43.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label43.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label43.Location = new System.Drawing.Point(170, 37);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(14, 16);
+            this.label43.Size = new System.Drawing.Size(14, 17);
             this.label43.TabIndex = 31;
             this.label43.Text = "+";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1526,10 +1548,11 @@ namespace Vectores
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label34.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label34.Location = new System.Drawing.Point(162, 37);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(11, 16);
+            this.label34.Size = new System.Drawing.Size(12, 17);
             this.label34.TabIndex = 30;
             this.label34.Text = ")";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1537,10 +1560,11 @@ namespace Vectores
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(113, 37);
+            this.label35.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label35.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label35.Location = new System.Drawing.Point(77, 37);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(11, 16);
+            this.label35.Size = new System.Drawing.Size(12, 17);
             this.label35.TabIndex = 29;
             this.label35.Text = "(";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1548,10 +1572,11 @@ namespace Vectores
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(138, 37);
+            this.label38.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label38.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label38.Location = new System.Drawing.Point(119, 37);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(12, 16);
+            this.label38.Size = new System.Drawing.Size(13, 17);
             this.label38.TabIndex = 28;
             this.label38.Text = "*";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1559,10 +1584,11 @@ namespace Vectores
             // lblProductoX2
             // 
             this.lblProductoX2.AutoSize = true;
-            this.lblProductoX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductoX2.Location = new System.Drawing.Point(149, 37);
+            this.lblProductoX2.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblProductoX2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblProductoX2.Location = new System.Drawing.Point(138, 37);
             this.lblProductoX2.Name = "lblProductoX2";
-            this.lblProductoX2.Size = new System.Drawing.Size(20, 16);
+            this.lblProductoX2.Size = new System.Drawing.Size(20, 17);
             this.lblProductoX2.TabIndex = 27;
             this.lblProductoX2.Text = "x2";
             this.lblProductoX2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1571,10 +1597,11 @@ namespace Vectores
             // lblProductoX1
             // 
             this.lblProductoX1.AutoSize = true;
-            this.lblProductoX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductoX1.Location = new System.Drawing.Point(122, 37);
+            this.lblProductoX1.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblProductoX1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblProductoX1.Location = new System.Drawing.Point(93, 37);
             this.lblProductoX1.Name = "lblProductoX1";
-            this.lblProductoX1.Size = new System.Drawing.Size(20, 16);
+            this.lblProductoX1.Size = new System.Drawing.Size(20, 17);
             this.lblProductoX1.TabIndex = 26;
             this.lblProductoX1.Text = "x1";
             this.lblProductoX1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1583,10 +1610,11 @@ namespace Vectores
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(236, 37);
+            this.label20.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label20.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label20.Location = new System.Drawing.Point(260, 37);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(11, 16);
+            this.label20.Size = new System.Drawing.Size(12, 17);
             this.label20.TabIndex = 25;
             this.label20.Text = ")";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1594,10 +1622,11 @@ namespace Vectores
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(187, 37);
+            this.label40.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label40.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label40.Location = new System.Drawing.Point(182, 37);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(11, 16);
+            this.label40.Size = new System.Drawing.Size(12, 17);
             this.label40.TabIndex = 24;
             this.label40.Text = "(";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1605,10 +1634,11 @@ namespace Vectores
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(212, 37);
+            this.label41.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label41.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label41.Location = new System.Drawing.Point(219, 37);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(12, 16);
+            this.label41.Size = new System.Drawing.Size(13, 17);
             this.label41.TabIndex = 23;
             this.label41.Text = "*";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1616,10 +1646,11 @@ namespace Vectores
             // lblProductoY2
             // 
             this.lblProductoY2.AutoSize = true;
-            this.lblProductoY2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductoY2.Location = new System.Drawing.Point(223, 37);
+            this.lblProductoY2.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblProductoY2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblProductoY2.Location = new System.Drawing.Point(238, 37);
             this.lblProductoY2.Name = "lblProductoY2";
-            this.lblProductoY2.Size = new System.Drawing.Size(21, 16);
+            this.lblProductoY2.Size = new System.Drawing.Size(20, 17);
             this.lblProductoY2.TabIndex = 22;
             this.lblProductoY2.Text = "y2";
             this.lblProductoY2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1628,10 +1659,11 @@ namespace Vectores
             // lblProductoY1
             // 
             this.lblProductoY1.AutoSize = true;
-            this.lblProductoY1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductoY1.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblProductoY1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblProductoY1.Location = new System.Drawing.Point(196, 37);
             this.lblProductoY1.Name = "lblProductoY1";
-            this.lblProductoY1.Size = new System.Drawing.Size(21, 16);
+            this.lblProductoY1.Size = new System.Drawing.Size(20, 17);
             this.lblProductoY1.TabIndex = 21;
             this.lblProductoY1.Text = "y1";
             this.lblProductoY1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1640,16 +1672,18 @@ namespace Vectores
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label21.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label21.Location = new System.Drawing.Point(50, 10);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(191, 16);
+            this.label21.Size = new System.Drawing.Size(170, 17);
             this.label21.TabIndex = 17;
             this.label21.Text = "El producto de los vectores es:";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelProducto
             // 
+            this.PanelProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.PanelProducto.Controls.Add(this.BtnCalcularProducto);
             this.PanelProducto.Controls.Add(this.groupBox4);
             this.PanelProducto.Controls.Add(this.groupBox5);
@@ -1662,7 +1696,7 @@ namespace Vectores
             // 
             // BtnCalcularProducto
             // 
-            this.BtnCalcularProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCalcularProducto.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnCalcularProducto.Location = new System.Drawing.Point(111, 103);
             this.BtnCalcularProducto.Name = "BtnCalcularProducto";
             this.BtnCalcularProducto.Size = new System.Drawing.Size(68, 26);
@@ -1677,7 +1711,8 @@ namespace Vectores
             this.groupBox4.Controls.Add(this.label22);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Controls.Add(this.txtVectorProductoX2);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox4.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox4.Location = new System.Drawing.Point(157, 3);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(123, 88);
@@ -1689,7 +1724,7 @@ namespace Vectores
             // 
             this.txtVectorProductoY2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtVectorProductoY2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVectorProductoY2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVectorProductoY2.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtVectorProductoY2.Location = new System.Drawing.Point(48, 59);
             this.txtVectorProductoY2.Name = "txtVectorProductoY2";
             this.txtVectorProductoY2.Size = new System.Drawing.Size(35, 19);
@@ -1699,22 +1734,22 @@ namespace Vectores
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label22.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label22.Location = new System.Drawing.Point(13, 31);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(18, 16);
+            this.label22.Size = new System.Drawing.Size(18, 17);
             this.label22.TabIndex = 14;
             this.label22.Text = "X:";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label23.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label23.Location = new System.Drawing.Point(13, 59);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(19, 16);
+            this.label23.Size = new System.Drawing.Size(17, 17);
             this.label23.TabIndex = 15;
             this.label23.Text = "Y:";
             // 
@@ -1722,7 +1757,7 @@ namespace Vectores
             // 
             this.txtVectorProductoX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtVectorProductoX2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVectorProductoX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVectorProductoX2.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtVectorProductoX2.Location = new System.Drawing.Point(48, 31);
             this.txtVectorProductoX2.Name = "txtVectorProductoX2";
             this.txtVectorProductoX2.Size = new System.Drawing.Size(35, 19);
@@ -1735,7 +1770,8 @@ namespace Vectores
             this.groupBox5.Controls.Add(this.label24);
             this.groupBox5.Controls.Add(this.txtVectorProductoX1);
             this.groupBox5.Controls.Add(this.label25);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox5.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox5.Location = new System.Drawing.Point(12, 3);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(123, 88);
@@ -1747,7 +1783,7 @@ namespace Vectores
             // 
             this.txtVectorProductoY1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtVectorProductoY1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVectorProductoY1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVectorProductoY1.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtVectorProductoY1.Location = new System.Drawing.Point(57, 59);
             this.txtVectorProductoY1.Name = "txtVectorProductoY1";
             this.txtVectorProductoY1.Size = new System.Drawing.Size(35, 19);
@@ -1757,11 +1793,11 @@ namespace Vectores
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label24.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label24.Location = new System.Drawing.Point(22, 31);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(18, 16);
+            this.label24.Size = new System.Drawing.Size(18, 17);
             this.label24.TabIndex = 10;
             this.label24.Text = "X:";
             // 
@@ -1769,7 +1805,7 @@ namespace Vectores
             // 
             this.txtVectorProductoX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtVectorProductoX1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVectorProductoX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVectorProductoX1.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtVectorProductoX1.Location = new System.Drawing.Point(57, 31);
             this.txtVectorProductoX1.Name = "txtVectorProductoX1";
             this.txtVectorProductoX1.Size = new System.Drawing.Size(35, 19);
@@ -1779,22 +1815,22 @@ namespace Vectores
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label25.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label25.Location = new System.Drawing.Point(22, 59);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(19, 16);
+            this.label25.Size = new System.Drawing.Size(17, 17);
             this.label25.TabIndex = 11;
             this.label25.Text = "Y:";
             // 
             // Btn_SubMenuOperationsProducto
             // 
-            this.Btn_SubMenuOperationsProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
+            this.Btn_SubMenuOperationsProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(174)))), ((int)(((byte)(209)))));
             this.Btn_SubMenuOperationsProducto.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_SubMenuOperationsProducto.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.Btn_SubMenuOperationsProducto.FlatAppearance.BorderSize = 0;
             this.Btn_SubMenuOperationsProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SubMenuOperationsProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_SubMenuOperationsProducto.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_SubMenuOperationsProducto.ForeColor = System.Drawing.Color.White;
             this.Btn_SubMenuOperationsProducto.Location = new System.Drawing.Point(0, 725);
             this.Btn_SubMenuOperationsProducto.Name = "Btn_SubMenuOperationsProducto";
@@ -1818,6 +1854,7 @@ namespace Vectores
             // 
             // PanelRestaVector
             // 
+            this.PanelRestaVector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.PanelRestaVector.Controls.Add(this.label14);
             this.PanelRestaVector.Controls.Add(this.label36);
             this.PanelRestaVector.Controls.Add(this.label37);
@@ -1835,10 +1872,11 @@ namespace Vectores
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(106, 44);
+            this.label14.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label14.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label14.Location = new System.Drawing.Point(117, 44);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(11, 16);
+            this.label14.Size = new System.Drawing.Size(12, 17);
             this.label14.TabIndex = 25;
             this.label14.Text = ")";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1846,10 +1884,11 @@ namespace Vectores
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(57, 44);
+            this.label36.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label36.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label36.Location = new System.Drawing.Point(44, 44);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(11, 16);
+            this.label36.Size = new System.Drawing.Size(12, 17);
             this.label36.TabIndex = 24;
             this.label36.Text = "(";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1857,10 +1896,11 @@ namespace Vectores
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label37.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label37.Location = new System.Drawing.Point(82, 44);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(10, 16);
+            this.label37.Size = new System.Drawing.Size(11, 17);
             this.label37.TabIndex = 23;
             this.label37.Text = ",";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1868,10 +1908,11 @@ namespace Vectores
             // lblRestaY
             // 
             this.lblRestaY.AutoSize = true;
-            this.lblRestaY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRestaY.Location = new System.Drawing.Point(93, 44);
+            this.lblRestaY.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblRestaY.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblRestaY.Location = new System.Drawing.Point(99, 44);
             this.lblRestaY.Name = "lblRestaY";
-            this.lblRestaY.Size = new System.Drawing.Size(14, 16);
+            this.lblRestaY.Size = new System.Drawing.Size(14, 17);
             this.lblRestaY.TabIndex = 22;
             this.lblRestaY.Text = "y";
             this.lblRestaY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1880,10 +1921,11 @@ namespace Vectores
             // lblRestaX
             // 
             this.lblRestaX.AutoSize = true;
-            this.lblRestaX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRestaX.Location = new System.Drawing.Point(66, 44);
+            this.lblRestaX.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.lblRestaX.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblRestaX.Location = new System.Drawing.Point(62, 44);
             this.lblRestaX.Name = "lblRestaX";
-            this.lblRestaX.Size = new System.Drawing.Size(13, 16);
+            this.lblRestaX.Size = new System.Drawing.Size(14, 17);
             this.lblRestaX.TabIndex = 21;
             this.lblRestaX.Text = "x";
             this.lblRestaX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1891,7 +1933,7 @@ namespace Vectores
             // 
             // Btn_CalcularResta
             // 
-            this.Btn_CalcularResta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_CalcularResta.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_CalcularResta.Location = new System.Drawing.Point(176, 39);
             this.Btn_CalcularResta.Name = "Btn_CalcularResta";
             this.Btn_CalcularResta.Size = new System.Drawing.Size(64, 26);
@@ -1903,16 +1945,18 @@ namespace Vectores
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label15.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label15.Location = new System.Drawing.Point(60, 10);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(171, 16);
+            this.label15.Size = new System.Drawing.Size(150, 17);
             this.label15.TabIndex = 17;
             this.label15.Text = "La resta de los vectores es:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelResta
             // 
+            this.PanelResta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.PanelResta.Controls.Add(this.BtnCalcularResta);
             this.PanelResta.Controls.Add(this.groupBox2);
             this.PanelResta.Controls.Add(this.groupBox3);
@@ -1925,7 +1969,7 @@ namespace Vectores
             // 
             // BtnCalcularResta
             // 
-            this.BtnCalcularResta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCalcularResta.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnCalcularResta.Location = new System.Drawing.Point(111, 103);
             this.BtnCalcularResta.Name = "BtnCalcularResta";
             this.BtnCalcularResta.Size = new System.Drawing.Size(68, 26);
@@ -1940,7 +1984,8 @@ namespace Vectores
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.txtVectorRestaX2);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox2.Location = new System.Drawing.Point(157, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(123, 88);
@@ -1952,7 +1997,7 @@ namespace Vectores
             // 
             this.txtVectorRestaY2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtVectorRestaY2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVectorRestaY2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVectorRestaY2.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtVectorRestaY2.Location = new System.Drawing.Point(48, 59);
             this.txtVectorRestaY2.Name = "txtVectorRestaY2";
             this.txtVectorRestaY2.Size = new System.Drawing.Size(35, 19);
@@ -1962,22 +2007,22 @@ namespace Vectores
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label16.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label16.Location = new System.Drawing.Point(13, 31);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(18, 16);
+            this.label16.Size = new System.Drawing.Size(18, 17);
             this.label16.TabIndex = 14;
             this.label16.Text = "X:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label17.Location = new System.Drawing.Point(13, 59);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(19, 16);
+            this.label17.Size = new System.Drawing.Size(17, 17);
             this.label17.TabIndex = 15;
             this.label17.Text = "Y:";
             // 
@@ -1985,7 +2030,7 @@ namespace Vectores
             // 
             this.txtVectorRestaX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtVectorRestaX2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVectorRestaX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVectorRestaX2.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtVectorRestaX2.Location = new System.Drawing.Point(48, 31);
             this.txtVectorRestaX2.Name = "txtVectorRestaX2";
             this.txtVectorRestaX2.Size = new System.Drawing.Size(35, 19);
@@ -1998,7 +2043,8 @@ namespace Vectores
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.txtVectorRestaX1);
             this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.groupBox3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox3.Location = new System.Drawing.Point(12, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(123, 88);
@@ -2010,7 +2056,7 @@ namespace Vectores
             // 
             this.txtVectorRestaY1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtVectorRestaY1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVectorRestaY1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVectorRestaY1.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtVectorRestaY1.Location = new System.Drawing.Point(57, 59);
             this.txtVectorRestaY1.Name = "txtVectorRestaY1";
             this.txtVectorRestaY1.Size = new System.Drawing.Size(35, 19);
@@ -2020,11 +2066,11 @@ namespace Vectores
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label18.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label18.Location = new System.Drawing.Point(22, 31);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(18, 16);
+            this.label18.Size = new System.Drawing.Size(18, 17);
             this.label18.TabIndex = 10;
             this.label18.Text = "X:";
             // 
@@ -2032,7 +2078,7 @@ namespace Vectores
             // 
             this.txtVectorRestaX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtVectorRestaX1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtVectorRestaX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVectorRestaX1.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtVectorRestaX1.Location = new System.Drawing.Point(57, 31);
             this.txtVectorRestaX1.Name = "txtVectorRestaX1";
             this.txtVectorRestaX1.Size = new System.Drawing.Size(35, 19);
@@ -2042,22 +2088,22 @@ namespace Vectores
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Font = new System.Drawing.Font("Source Sans Pro", 9.75F);
+            this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label19.Location = new System.Drawing.Point(22, 59);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(19, 16);
+            this.label19.Size = new System.Drawing.Size(17, 17);
             this.label19.TabIndex = 11;
             this.label19.Text = "Y:";
             // 
             // Btn_SubMenuOperationsResta
             // 
-            this.Btn_SubMenuOperationsResta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
+            this.Btn_SubMenuOperationsResta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(174)))), ((int)(((byte)(209)))));
             this.Btn_SubMenuOperationsResta.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_SubMenuOperationsResta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.Btn_SubMenuOperationsResta.FlatAppearance.BorderSize = 0;
             this.Btn_SubMenuOperationsResta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SubMenuOperationsResta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_SubMenuOperationsResta.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_SubMenuOperationsResta.ForeColor = System.Drawing.Color.White;
             this.Btn_SubMenuOperationsResta.Location = new System.Drawing.Point(0, 475);
             this.Btn_SubMenuOperationsResta.Name = "Btn_SubMenuOperationsResta";
@@ -2081,6 +2127,7 @@ namespace Vectores
             // 
             // PanelSumaVector
             // 
+            this.PanelSumaVector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.PanelSumaVector.Controls.Add(this.label12);
             this.PanelSumaVector.Controls.Add(this.label32);
             this.PanelSumaVector.Controls.Add(this.label33);
@@ -2098,10 +2145,11 @@ namespace Vectores
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(106, 44);
+            this.label12.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label12.Location = new System.Drawing.Point(117, 44);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(11, 16);
+            this.label12.Size = new System.Drawing.Size(12, 17);
             this.label12.TabIndex = 25;
             this.label12.Text = ")";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2109,10 +2157,11 @@ namespace Vectores
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(57, 44);
+            this.label32.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label32.Location = new System.Drawing.Point(44, 44);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(11, 16);
+            this.label32.Size = new System.Drawing.Size(12, 17);
             this.label32.TabIndex = 24;
             this.label32.Text = "(";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2120,10 +2169,11 @@ namespace Vectores
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label33.Location = new System.Drawing.Point(82, 44);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(10, 16);
+            this.label33.Size = new System.Drawing.Size(11, 17);
             this.label33.TabIndex = 23;
             this.label33.Text = ",";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2131,10 +2181,11 @@ namespace Vectores
             // lblSumaY
             // 
             this.lblSumaY.AutoSize = true;
-            this.lblSumaY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSumaY.Location = new System.Drawing.Point(93, 44);
+            this.lblSumaY.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSumaY.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblSumaY.Location = new System.Drawing.Point(99, 44);
             this.lblSumaY.Name = "lblSumaY";
-            this.lblSumaY.Size = new System.Drawing.Size(14, 16);
+            this.lblSumaY.Size = new System.Drawing.Size(14, 17);
             this.lblSumaY.TabIndex = 22;
             this.lblSumaY.Text = "y";
             this.lblSumaY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2143,10 +2194,11 @@ namespace Vectores
             // lblSumaX
             // 
             this.lblSumaX.AutoSize = true;
-            this.lblSumaX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSumaX.Location = new System.Drawing.Point(66, 44);
+            this.lblSumaX.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSumaX.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblSumaX.Location = new System.Drawing.Point(62, 44);
             this.lblSumaX.Name = "lblSumaX";
-            this.lblSumaX.Size = new System.Drawing.Size(13, 16);
+            this.lblSumaX.Size = new System.Drawing.Size(14, 17);
             this.lblSumaX.TabIndex = 21;
             this.lblSumaX.Text = "x";
             this.lblSumaX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2154,7 +2206,7 @@ namespace Vectores
             // 
             // Btn_CalcularSuma
             // 
-            this.Btn_CalcularSuma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_CalcularSuma.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.Btn_CalcularSuma.Location = new System.Drawing.Point(176, 39);
             this.Btn_CalcularSuma.Name = "Btn_CalcularSuma";
             this.Btn_CalcularSuma.Size = new System.Drawing.Size(64, 26);
@@ -2166,16 +2218,18 @@ namespace Vectores
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label13.Location = new System.Drawing.Point(58, 10);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(174, 16);
+            this.label13.Size = new System.Drawing.Size(153, 17);
             this.label13.TabIndex = 17;
             this.label13.Text = "La suma de los vectores es:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelSuma
             // 
+            this.PanelSuma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.PanelSuma.Controls.Add(this.BtnCalcularSuma);
             this.PanelSuma.Controls.Add(this.groupBox6);
             this.PanelSuma.Controls.Add(this.groupBox7);
@@ -2188,7 +2242,7 @@ namespace Vectores
             // 
             // BtnCalcularSuma
             // 
-            this.BtnCalcularSuma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCalcularSuma.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnCalcularSuma.Location = new System.Drawing.Point(111, 103);
             this.BtnCalcularSuma.Name = "BtnCalcularSuma";
             this.BtnCalcularSuma.Size = new System.Drawing.Size(68, 26);
@@ -2203,7 +2257,8 @@ namespace Vectores
             this.groupBox6.Controls.Add(this.label26);
             this.groupBox6.Controls.Add(this.label27);
             this.groupBox6.Controls.Add(this.txtSumaVectorX2);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox6.Location = new System.Drawing.Point(157, 3);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(123, 88);
@@ -2215,7 +2270,7 @@ namespace Vectores
             // 
             this.txtSumaVectorY2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtSumaVectorY2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSumaVectorY2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumaVectorY2.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtSumaVectorY2.Location = new System.Drawing.Point(48, 59);
             this.txtSumaVectorY2.Name = "txtSumaVectorY2";
             this.txtSumaVectorY2.Size = new System.Drawing.Size(35, 19);
@@ -2225,22 +2280,22 @@ namespace Vectores
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label26.Location = new System.Drawing.Point(13, 31);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(18, 16);
+            this.label26.Size = new System.Drawing.Size(18, 17);
             this.label26.TabIndex = 14;
             this.label26.Text = "X:";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label27.Location = new System.Drawing.Point(13, 59);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(19, 16);
+            this.label27.Size = new System.Drawing.Size(17, 17);
             this.label27.TabIndex = 15;
             this.label27.Text = "Y:";
             // 
@@ -2248,7 +2303,7 @@ namespace Vectores
             // 
             this.txtSumaVectorX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtSumaVectorX2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSumaVectorX2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumaVectorX2.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtSumaVectorX2.Location = new System.Drawing.Point(48, 31);
             this.txtSumaVectorX2.Name = "txtSumaVectorX2";
             this.txtSumaVectorX2.Size = new System.Drawing.Size(35, 19);
@@ -2261,7 +2316,8 @@ namespace Vectores
             this.groupBox7.Controls.Add(this.label28);
             this.groupBox7.Controls.Add(this.txtSumaVectorX1);
             this.groupBox7.Controls.Add(this.label29);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox7.Location = new System.Drawing.Point(12, 3);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(123, 88);
@@ -2273,7 +2329,7 @@ namespace Vectores
             // 
             this.txtSumaVectorY1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtSumaVectorY1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSumaVectorY1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumaVectorY1.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtSumaVectorY1.Location = new System.Drawing.Point(57, 59);
             this.txtSumaVectorY1.Name = "txtSumaVectorY1";
             this.txtSumaVectorY1.Size = new System.Drawing.Size(35, 19);
@@ -2283,11 +2339,11 @@ namespace Vectores
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label28.Location = new System.Drawing.Point(22, 31);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(18, 16);
+            this.label28.Size = new System.Drawing.Size(18, 17);
             this.label28.TabIndex = 10;
             this.label28.Text = "X:";
             // 
@@ -2295,7 +2351,7 @@ namespace Vectores
             // 
             this.txtSumaVectorX1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtSumaVectorX1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSumaVectorX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSumaVectorX1.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtSumaVectorX1.Location = new System.Drawing.Point(57, 31);
             this.txtSumaVectorX1.Name = "txtSumaVectorX1";
             this.txtSumaVectorX1.Size = new System.Drawing.Size(35, 19);
@@ -2305,22 +2361,22 @@ namespace Vectores
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.White;
+            this.label29.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label29.Location = new System.Drawing.Point(22, 59);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(19, 16);
+            this.label29.Size = new System.Drawing.Size(17, 17);
             this.label29.TabIndex = 11;
             this.label29.Text = "Y:";
             // 
             // Btn_SubMenuOperationsSuma
             // 
-            this.Btn_SubMenuOperationsSuma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
+            this.Btn_SubMenuOperationsSuma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(174)))), ((int)(((byte)(209)))));
             this.Btn_SubMenuOperationsSuma.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_SubMenuOperationsSuma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.Btn_SubMenuOperationsSuma.FlatAppearance.BorderSize = 0;
             this.Btn_SubMenuOperationsSuma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SubMenuOperationsSuma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_SubMenuOperationsSuma.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_SubMenuOperationsSuma.ForeColor = System.Drawing.Color.White;
             this.Btn_SubMenuOperationsSuma.Location = new System.Drawing.Point(0, 225);
             this.Btn_SubMenuOperationsSuma.Name = "Btn_SubMenuOperationsSuma";
@@ -2332,6 +2388,7 @@ namespace Vectores
             // 
             // PanelSubMenuOperationsSentido
             // 
+            this.PanelSubMenuOperationsSentido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.PanelSubMenuOperationsSentido.Controls.Add(this.label31);
             this.PanelSubMenuOperationsSentido.Controls.Add(this.label11);
             this.PanelSubMenuOperationsSentido.Controls.Add(this.label5);
@@ -2351,10 +2408,11 @@ namespace Vectores
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(154, 71);
+            this.label31.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label31.Location = new System.Drawing.Point(167, 71);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(11, 16);
+            this.label31.Size = new System.Drawing.Size(12, 17);
             this.label31.TabIndex = 20;
             this.label31.Text = ")";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2362,10 +2420,11 @@ namespace Vectores
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(105, 71);
+            this.label11.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label11.Location = new System.Drawing.Point(95, 71);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(11, 16);
+            this.label11.Size = new System.Drawing.Size(12, 17);
             this.label11.TabIndex = 19;
             this.label11.Text = "(";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2373,10 +2432,11 @@ namespace Vectores
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label5.Location = new System.Drawing.Point(130, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(10, 16);
+            this.label5.Size = new System.Drawing.Size(11, 17);
             this.label5.TabIndex = 18;
             this.label5.Text = ",";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2385,10 +2445,11 @@ namespace Vectores
             // lblVectorActualY_PnlCambiarSentido
             // 
             this.lblVectorActualY_PnlCambiarSentido.AutoSize = true;
-            this.lblVectorActualY_PnlCambiarSentido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVectorActualY_PnlCambiarSentido.Location = new System.Drawing.Point(141, 71);
+            this.lblVectorActualY_PnlCambiarSentido.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVectorActualY_PnlCambiarSentido.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblVectorActualY_PnlCambiarSentido.Location = new System.Drawing.Point(148, 71);
             this.lblVectorActualY_PnlCambiarSentido.Name = "lblVectorActualY_PnlCambiarSentido";
-            this.lblVectorActualY_PnlCambiarSentido.Size = new System.Drawing.Size(14, 16);
+            this.lblVectorActualY_PnlCambiarSentido.Size = new System.Drawing.Size(14, 17);
             this.lblVectorActualY_PnlCambiarSentido.TabIndex = 17;
             this.lblVectorActualY_PnlCambiarSentido.Text = "y";
             this.lblVectorActualY_PnlCambiarSentido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2396,7 +2457,7 @@ namespace Vectores
             // 
             // BtnCambiarSentido
             // 
-            this.BtnCambiarSentido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCambiarSentido.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnCambiarSentido.Location = new System.Drawing.Point(198, 66);
             this.BtnCambiarSentido.Name = "BtnCambiarSentido";
             this.BtnCambiarSentido.Size = new System.Drawing.Size(64, 26);
@@ -2408,10 +2469,11 @@ namespace Vectores
             // lblVectorActualX_PnlCambiarSentido
             // 
             this.lblVectorActualX_PnlCambiarSentido.AutoSize = true;
-            this.lblVectorActualX_PnlCambiarSentido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVectorActualX_PnlCambiarSentido.Location = new System.Drawing.Point(114, 71);
+            this.lblVectorActualX_PnlCambiarSentido.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVectorActualX_PnlCambiarSentido.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblVectorActualX_PnlCambiarSentido.Location = new System.Drawing.Point(111, 73);
             this.lblVectorActualX_PnlCambiarSentido.Name = "lblVectorActualX_PnlCambiarSentido";
-            this.lblVectorActualX_PnlCambiarSentido.Size = new System.Drawing.Size(13, 16);
+            this.lblVectorActualX_PnlCambiarSentido.Size = new System.Drawing.Size(14, 17);
             this.lblVectorActualX_PnlCambiarSentido.TabIndex = 16;
             this.lblVectorActualX_PnlCambiarSentido.Text = "x";
             this.lblVectorActualX_PnlCambiarSentido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2420,10 +2482,11 @@ namespace Vectores
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label10.Location = new System.Drawing.Point(27, 71);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 16);
+            this.label10.Size = new System.Drawing.Size(46, 17);
             this.label10.TabIndex = 15;
             this.label10.Text = "Vector:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2431,10 +2494,11 @@ namespace Vectores
             // checkBoxY
             // 
             this.checkBoxY.AutoSize = true;
-            this.checkBoxY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxY.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxY.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.checkBoxY.Location = new System.Drawing.Point(173, 42);
             this.checkBoxY.Name = "checkBoxY";
-            this.checkBoxY.Size = new System.Drawing.Size(35, 20);
+            this.checkBoxY.Size = new System.Drawing.Size(33, 21);
             this.checkBoxY.TabIndex = 14;
             this.checkBoxY.Text = "Y";
             this.checkBoxY.UseVisualStyleBackColor = true;
@@ -2443,10 +2507,11 @@ namespace Vectores
             // checkBoxX
             // 
             this.checkBoxX.AutoSize = true;
-            this.checkBoxX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxX.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxX.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.checkBoxX.Location = new System.Drawing.Point(91, 42);
             this.checkBoxX.Name = "checkBoxX";
-            this.checkBoxX.Size = new System.Drawing.Size(34, 20);
+            this.checkBoxX.Size = new System.Drawing.Size(34, 21);
             this.checkBoxX.TabIndex = 13;
             this.checkBoxX.Text = "X";
             this.checkBoxX.UseVisualStyleBackColor = true;
@@ -2455,22 +2520,23 @@ namespace Vectores
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label8.Location = new System.Drawing.Point(34, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(233, 16);
+            this.label8.Size = new System.Drawing.Size(209, 17);
             this.label8.TabIndex = 12;
             this.label8.Text = "Seleccionar eje a cambiar de sentido:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Btn_SubMenuOperationsSentido
             // 
-            this.Btn_SubMenuOperationsSentido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
+            this.Btn_SubMenuOperationsSentido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(174)))), ((int)(((byte)(209)))));
             this.Btn_SubMenuOperationsSentido.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_SubMenuOperationsSentido.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.Btn_SubMenuOperationsSentido.FlatAppearance.BorderSize = 0;
             this.Btn_SubMenuOperationsSentido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SubMenuOperationsSentido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_SubMenuOperationsSentido.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Btn_SubMenuOperationsSentido.ForeColor = System.Drawing.Color.White;
             this.Btn_SubMenuOperationsSentido.Location = new System.Drawing.Point(0, 95);
             this.Btn_SubMenuOperationsSentido.Name = "Btn_SubMenuOperationsSentido";
@@ -2482,6 +2548,7 @@ namespace Vectores
             // 
             // PanelSubMenuOperationsEscalar
             // 
+            this.PanelSubMenuOperationsEscalar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.PanelSubMenuOperationsEscalar.Controls.Add(this.lblVectorActual_PnlEscalar);
             this.PanelSubMenuOperationsEscalar.Controls.Add(this.BtnAplicarEscalar);
             this.PanelSubMenuOperationsEscalar.Controls.Add(this.label9);
@@ -2496,10 +2563,11 @@ namespace Vectores
             // lblVectorActual_PnlEscalar
             // 
             this.lblVectorActual_PnlEscalar.AutoSize = true;
-            this.lblVectorActual_PnlEscalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVectorActual_PnlEscalar.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVectorActual_PnlEscalar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblVectorActual_PnlEscalar.Location = new System.Drawing.Point(143, 26);
             this.lblVectorActual_PnlEscalar.Name = "lblVectorActual_PnlEscalar";
-            this.lblVectorActual_PnlEscalar.Size = new System.Drawing.Size(34, 16);
+            this.lblVectorActual_PnlEscalar.Size = new System.Drawing.Size(40, 19);
             this.lblVectorActual_PnlEscalar.TabIndex = 14;
             this.lblVectorActual_PnlEscalar.Text = "(x, y)";
             this.lblVectorActual_PnlEscalar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2507,7 +2575,7 @@ namespace Vectores
             // 
             // BtnAplicarEscalar
             // 
-            this.BtnAplicarEscalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAplicarEscalar.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold);
             this.BtnAplicarEscalar.Location = new System.Drawing.Point(197, 18);
             this.BtnAplicarEscalar.Name = "BtnAplicarEscalar";
             this.BtnAplicarEscalar.Size = new System.Drawing.Size(64, 33);
@@ -2519,10 +2587,11 @@ namespace Vectores
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label9.Location = new System.Drawing.Point(12, 26);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 16);
+            this.label9.Size = new System.Drawing.Size(59, 19);
             this.label9.TabIndex = 11;
             this.label9.Text = "Escalar:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2531,7 +2600,7 @@ namespace Vectores
             // 
             this.txtEscalar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtEscalar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEscalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEscalar.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtEscalar.Location = new System.Drawing.Point(88, 25);
             this.txtEscalar.Name = "txtEscalar";
             this.txtEscalar.Size = new System.Drawing.Size(35, 19);
@@ -2540,12 +2609,12 @@ namespace Vectores
             // 
             // Btn_SubMenuOperationsEscalar
             // 
-            this.Btn_SubMenuOperationsEscalar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
+            this.Btn_SubMenuOperationsEscalar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(174)))), ((int)(((byte)(209)))));
             this.Btn_SubMenuOperationsEscalar.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_SubMenuOperationsEscalar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.Btn_SubMenuOperationsEscalar.FlatAppearance.BorderSize = 0;
             this.Btn_SubMenuOperationsEscalar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_SubMenuOperationsEscalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_SubMenuOperationsEscalar.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_SubMenuOperationsEscalar.ForeColor = System.Drawing.Color.White;
             this.Btn_SubMenuOperationsEscalar.Location = new System.Drawing.Point(0, 0);
             this.Btn_SubMenuOperationsEscalar.Name = "Btn_SubMenuOperationsEscalar";
@@ -2557,11 +2626,11 @@ namespace Vectores
             // 
             // BtnMenuOperations
             // 
-            this.BtnMenuOperations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(33)))), ((int)(((byte)(17)))));
+            this.BtnMenuOperations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(36)))), ((int)(((byte)(34)))));
             this.BtnMenuOperations.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnMenuOperations.FlatAppearance.BorderSize = 0;
             this.BtnMenuOperations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMenuOperations.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMenuOperations.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMenuOperations.ForeColor = System.Drawing.Color.White;
             this.BtnMenuOperations.Location = new System.Drawing.Point(0, 90);
             this.BtnMenuOperations.Name = "BtnMenuOperations";
@@ -2574,9 +2643,8 @@ namespace Vectores
             // 
             // Panel_SubMenuDibujar
             // 
-            this.Panel_SubMenuDibujar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
+            this.Panel_SubMenuDibujar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(142)))), ((int)(((byte)(160)))));
             this.Panel_SubMenuDibujar.Controls.Add(this.linkLabel_Animar);
-            this.Panel_SubMenuDibujar.Controls.Add(this.linkLabel_DibujarMouse);
             this.Panel_SubMenuDibujar.Controls.Add(this.Btn_DrawVector);
             this.Panel_SubMenuDibujar.Controls.Add(this.txtAxisY);
             this.Panel_SubMenuDibujar.Controls.Add(this.txtAxisX);
@@ -2591,30 +2659,19 @@ namespace Vectores
             // linkLabel_Animar
             // 
             this.linkLabel_Animar.AutoSize = true;
+            this.linkLabel_Animar.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel_Animar.LinkColor = System.Drawing.Color.White;
-            this.linkLabel_Animar.Location = new System.Drawing.Point(201, 70);
+            this.linkLabel_Animar.Location = new System.Drawing.Point(194, 49);
             this.linkLabel_Animar.Name = "linkLabel_Animar";
-            this.linkLabel_Animar.Size = new System.Drawing.Size(39, 13);
+            this.linkLabel_Animar.Size = new System.Drawing.Size(48, 17);
             this.linkLabel_Animar.TabIndex = 11;
             this.linkLabel_Animar.TabStop = true;
             this.linkLabel_Animar.Text = "Animar";
             this.linkLabel_Animar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Animar_LinkClicked);
             // 
-            // linkLabel_DibujarMouse
-            // 
-            this.linkLabel_DibujarMouse.AutoSize = true;
-            this.linkLabel_DibujarMouse.LinkColor = System.Drawing.Color.White;
-            this.linkLabel_DibujarMouse.Location = new System.Drawing.Point(173, 49);
-            this.linkLabel_DibujarMouse.Name = "linkLabel_DibujarMouse";
-            this.linkLabel_DibujarMouse.Size = new System.Drawing.Size(95, 13);
-            this.linkLabel_DibujarMouse.TabIndex = 10;
-            this.linkLabel_DibujarMouse.TabStop = true;
-            this.linkLabel_DibujarMouse.Text = "Dibujar con mouse";
-            this.linkLabel_DibujarMouse.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_DibujarMouse_LinkClicked);
-            // 
             // Btn_DrawVector
             // 
-            this.Btn_DrawVector.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_DrawVector.Font = new System.Drawing.Font("Source Sans Pro", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_DrawVector.Location = new System.Drawing.Point(173, 13);
             this.Btn_DrawVector.Name = "Btn_DrawVector";
             this.Btn_DrawVector.Size = new System.Drawing.Size(95, 33);
@@ -2627,7 +2684,7 @@ namespace Vectores
             // 
             this.txtAxisY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtAxisY.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAxisY.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAxisY.Font = new System.Drawing.Font("Source Sans Pro", 11.25F);
             this.txtAxisY.Location = new System.Drawing.Point(92, 55);
             this.txtAxisY.Name = "txtAxisY";
             this.txtAxisY.Size = new System.Drawing.Size(35, 19);
@@ -2638,7 +2695,7 @@ namespace Vectores
             // 
             this.txtAxisX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(167)))));
             this.txtAxisX.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAxisX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAxisX.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAxisX.Location = new System.Drawing.Point(92, 18);
             this.txtAxisX.Name = "txtAxisX";
             this.txtAxisX.Size = new System.Drawing.Size(35, 19);
@@ -2648,33 +2705,33 @@ namespace Vectores
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(57, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 16);
+            this.label2.Size = new System.Drawing.Size(20, 19);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Y:";
+            this.label2.Text = "y:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(57, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 16);
+            this.label1.Size = new System.Drawing.Size(20, 19);
             this.label1.TabIndex = 5;
-            this.label1.Text = "X:";
+            this.label1.Text = "x:";
             // 
             // Btn_MenuDibujarOrigen
             // 
-            this.Btn_MenuDibujarOrigen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.Btn_MenuDibujarOrigen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(111)))), ((int)(((byte)(185)))));
             this.Btn_MenuDibujarOrigen.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_MenuDibujarOrigen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
             this.Btn_MenuDibujarOrigen.FlatAppearance.BorderSize = 0;
             this.Btn_MenuDibujarOrigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_MenuDibujarOrigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_MenuDibujarOrigen.Font = new System.Drawing.Font("Source Sans Pro", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_MenuDibujarOrigen.ForeColor = System.Drawing.Color.White;
             this.Btn_MenuDibujarOrigen.Location = new System.Drawing.Point(0, 0);
             this.Btn_MenuDibujarOrigen.Name = "Btn_MenuDibujarOrigen";
@@ -2686,7 +2743,7 @@ namespace Vectores
             // 
             // PanelTitle
             // 
-            this.PanelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(5)))), ((int)(((byte)(9)))));
+            this.PanelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(40)))), ((int)(((byte)(37)))));
             this.PanelTitle.Controls.Add(this.label3);
             this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTitle.Location = new System.Drawing.Point(0, 0);
@@ -2712,20 +2769,20 @@ namespace Vectores
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(152, 9);
+            this.label30.Font = new System.Drawing.Font("Source Sans Pro", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(129, 5);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(164, 20);
+            this.label30.Size = new System.Drawing.Size(187, 27);
             this.label30.TabIndex = 25;
             this.label30.Text = "Detalles del gráfico";
             // 
             // lblAngulo
             // 
             this.lblAngulo.AutoSize = true;
-            this.lblAngulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAngulo.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAngulo.Location = new System.Drawing.Point(409, 32);
             this.lblAngulo.Name = "lblAngulo";
-            this.lblAngulo.Size = new System.Drawing.Size(32, 18);
+            this.lblAngulo.Size = new System.Drawing.Size(33, 19);
             this.lblAngulo.TabIndex = 24;
             this.lblAngulo.Text = "ang";
             this.lblAngulo.Visible = false;
@@ -2733,20 +2790,20 @@ namespace Vectores
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(342, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 18);
+            this.label7.Size = new System.Drawing.Size(60, 19);
             this.label7.TabIndex = 23;
             this.label7.Text = "Ángulo: ";
             // 
             // lblCuadrante
             // 
             this.lblCuadrante.AutoSize = true;
-            this.lblCuadrante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuadrante.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCuadrante.Location = new System.Drawing.Point(267, 32);
             this.lblCuadrante.Name = "lblCuadrante";
-            this.lblCuadrante.Size = new System.Drawing.Size(40, 18);
+            this.lblCuadrante.Size = new System.Drawing.Size(40, 19);
             this.lblCuadrante.TabIndex = 22;
             this.lblCuadrante.Text = "cuad";
             this.lblCuadrante.Visible = false;
@@ -2754,20 +2811,20 @@ namespace Vectores
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(177, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 18);
+            this.label6.Size = new System.Drawing.Size(84, 19);
             this.label6.TabIndex = 21;
             this.label6.Text = "Cuadrante: ";
             // 
             // lblMagnitud
             // 
             this.lblMagnitud.AutoSize = true;
-            this.lblMagnitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMagnitud.Font = new System.Drawing.Font("Source Sans Pro", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMagnitud.Location = new System.Drawing.Point(85, 32);
             this.lblMagnitud.Name = "lblMagnitud";
-            this.lblMagnitud.Size = new System.Drawing.Size(37, 18);
+            this.lblMagnitud.Size = new System.Drawing.Size(37, 19);
             this.lblMagnitud.TabIndex = 20;
             this.lblMagnitud.Text = "mag";
             this.lblMagnitud.Visible = false;
@@ -2775,10 +2832,10 @@ namespace Vectores
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Source Sans Pro SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(3, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 18);
+            this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 19;
             this.label4.Text = "Magnitud: ";
             // 
@@ -2786,7 +2843,7 @@ namespace Vectores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.PanelDetallesGrafico);
             this.Controls.Add(this.PanelPrincipal);
@@ -3000,7 +3057,6 @@ namespace Vectores
         private System.Windows.Forms.Button Btn_MenuDibujarOrigen;
         private System.Windows.Forms.Panel Panel_DibujarFiguras;
         private System.Windows.Forms.Button Btn_DibujarFiguras;
-        private System.Windows.Forms.LinkLabel linkLabel_DibujarMouse;
         private System.Windows.Forms.LinkLabel linkLabel_Animar;
         private System.Windows.Forms.Button Btn_SubMenuCuadrado;
         private System.Windows.Forms.Panel Panel_SubMenuRecta;

@@ -27,6 +27,18 @@ namespace Vectores.Classes
             return (float)magnitud;
         }
 
+        public float Distance(Dots PuntoA, Dots PuntoB)
+        {
+            float Ax = PuntoA.fX;
+            float Ay = PuntoB.fY;
+            float Bx = PuntoB.fX;
+            float By = PuntoA.fY;
+
+            double distance = Math.Sqrt(Math.Pow(By-Ay, 2) + Math.Pow(Bx-Ax, 2));
+
+            return (float)distance;
+        }
+
         public int Quadrant(Dots Punto)
         {
             float fX = Punto.fX;
@@ -139,8 +151,8 @@ namespace Vectores.Classes
             float x = punto.X;
             float y = -punto.Y;
 
-            float pX = (x / 25) - 10;
-            float pY = (y / 25) + 10;
+            float pX = (x / 25) - 11;
+            float pY = (y / 25) + 11;
             Dots Converted_Point = new Dots(pX, pY);
             return Converted_Point;
         }

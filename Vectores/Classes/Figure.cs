@@ -10,7 +10,6 @@ namespace Vectores.Classes
 {
     internal class Figure
     {
-        Graphic map = new Graphic();
         Graphics graph;
 
         private float OriginX;
@@ -19,9 +18,8 @@ namespace Vectores.Classes
         const float scale = 25;
 
         static Random rand = new Random();
-        static Color color = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
 
-        Pen LinePen = new Pen(color, 2);
+        Pen LinePen = new Pen(Color.LightGray, 2);
 
         public Figure(PictureBox PicCanvas)
         {

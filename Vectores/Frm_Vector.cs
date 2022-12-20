@@ -19,6 +19,7 @@ namespace Vectores
     public partial class Frm_Vector : Form
     {
         Operations operation = new Operations();
+        Graphic start_map = new Graphic();
         private float generalX;
         private float generalY;
 
@@ -140,8 +141,11 @@ namespace Vectores
         {
             pictureBox_FreeDraw.Visible = false;
             Btn_ReDraw.Visible = true;
-            
+
+            PanelDetallesGrafico.Visible = true;
+
             Graphic Graph = new Graphic();
+            Graph.Clear(pctBox_Graph);
             Graph.DrawMap(pctBox_Graph);
             
             BtnMenuOperations.Visible = true;
@@ -160,6 +164,9 @@ namespace Vectores
         {
             Graphic map = new Graphic();
             pictureBox_FreeDraw.Visible = false;
+
+            PanelDetallesGrafico.Visible = false;
+
             map.Clear(pctBox_Graph);
             map.DrawMap(pctBox_Graph);
             showMenu(Panel_DibujarFiguras);
@@ -497,6 +504,7 @@ namespace Vectores
 
         private void pctBox_Graph_MouseDown(object sender, MouseEventArgs e)
         {
+            Btn_ReDraw.Visible = true;
             if (Panel_SubMenuDibujarCuadrado.Visible == true)
             {
                 if ((e.Button == MouseButtons.Left) && (e.X < pctBox_Graph.Width && e.Y < pctBox_Graph.Height && e.Y >= 0 && e.X >= 0))
@@ -548,6 +556,14 @@ namespace Vectores
                 txtAxisY.Text = Math.Round(Punto.fY,2).ToString();
                 generalX = Punto.fX;
                 generalY = Punto.fY;
+                
+                lblMagnitud.Text = Math.Round(operation.Magnitude(Punto), 2).ToString();
+                lblCuadrante.Text = operation.Quadrant(Punto).ToString();
+                lblAngulo.Text = Math.Round(operation.Angle(Punto), 2).ToString() + " °";
+
+                lblMagnitud.Visible = true;
+                lblCuadrante.Visible = true;
+                lblAngulo.Visible = true;
 
                 vector.Draw_Origin(pctBox_Graph, Punto);
             }
@@ -607,6 +623,7 @@ namespace Vectores
 
         private void Btn_SubMenuCuadrado_Click(object sender, EventArgs e)
         {
+            Panel_Cuadrado.Visible = true;
             showSubMenu(Panel_SubMenuDibujarCuadrado);
         }
 
@@ -616,12 +633,14 @@ namespace Vectores
             imEditor = Graphics.FromImage(mig);
             penGrosor = new Pen(Color.Black, 10);
             brushRelleno = new SolidBrush(Color.FromArgb(255, 255, 255));
+            Btn_ReDraw.Visible = true;
+            start_map.DrawMap(pctBox_Graph);
         }
 
         //DIBUJO ARCOIRIS
         private void pictureBox_FreeDraw_MouseMove(object sender, MouseEventArgs e)
         {
-            if (Panel_SubMenuDibujar .Visible == false)
+            if (Panel_SubMenuDibujar.Visible == false)
             {
                 var rand = new Random();
                 pictureBox_FreeDraw.Visible = true;
@@ -653,9 +672,8 @@ namespace Vectores
                         ((Bitmap)pictureBox_FreeDraw.Image).SetPixel(e.X - 1, e.Y, Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256)));
                     }
                 }
-                catch(Exception msg)
+                catch(Exception)
                 {
-                    MessageBox.Show("¡Ingrese valores a dibujar!" + msg);
                 }
             }
             else
@@ -668,6 +686,7 @@ namespace Vectores
         {
             Btn_ReDraw.Visible = true;
             showMenu(Panel_SubMenuDibujoLibre);
+            PanelDetallesGrafico.Visible = false;
             pictureBox_FreeDraw.Visible = true;
         }
 
@@ -734,6 +753,29 @@ namespace Vectores
             {
                 MessageBox.Show("¡Ingrese valores a dibujar!"+msg);
             }
+        }
+
+        private void pctBox_Graph_MouseMove(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Dots Punto = new Dots(operation.Convert_Point(e.Location));
+                txtGeneralX.Text = Punto.fX.ToString();
+                txtGeneralY.Text = Punto.fY.ToString();
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void Btn_DrawMap_Click(object sender, EventArgs e)
+        {
+            start_map.DrawMap(pctBox_Graph);
+            PanelDetallesGrafico.Visible = true;
+
+            lblMagnitud.Visible = true;
+            lblCuadrante.Visible = true;
+            lblAngulo.Visible = true;
         }
     }
 }

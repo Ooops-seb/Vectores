@@ -42,13 +42,14 @@ namespace Vectores.Classes
         public void Triangle(PictureBox PicCanvas, Dots PuntoA, Dots PuntoB)
         {
             graph = PicCanvas.CreateGraphics();
+            Operations op = new Operations();
 
             float x1 = PuntoA.fX;
             float y1 = PuntoA.fY;
             float x2 = PuntoB.fX;
             float y2 = PuntoB.fY;
 
-            double lado = Math.Sqrt(Math.Pow(y2 - y1,2) + Math.Pow(x2-x1,2));
+            double lado = op.Distance(x1, y1, x2, y2);
             double mx = (x1 + x2) / 2;
             double my = (y1 + y2) / 2;
             double auxAlturaX = Math.Cos((60 * Math.PI) / 180) * lado;
@@ -72,7 +73,7 @@ namespace Vectores.Classes
             Dots AuxPuntoA = new Dots(X1, Y1);
             Dots AuxPuntoB = new Dots(X2, Y2);
             Dots AuxPuntoC = new Dots(X3, Y3);
-            Operations op = new Operations();
+            
             op.PrintPoint(PicCanvas, AuxPuntoA);
             op.PrintPoint(PicCanvas, AuxPuntoB);
             op.PrintPoint(PicCanvas, AuxPuntoC);

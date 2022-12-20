@@ -1,7 +1,8 @@
 # Vectores (Proyecto en construcción)
 Proyecto básico de gestión de vectores y manejo de Picture Box y Bitmaps
 
-v3.2.1
+v3.2.2
+-Correcion de algunos bugs
 
 **Funcionalidades:**
 
@@ -25,5 +26,3 @@ _Pendientes:_
 Coreccion de dibujar punto
 
 Correccion de parpadeo de plano
-
-Boton Limpiar desaparece

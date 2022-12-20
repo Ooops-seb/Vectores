@@ -39,6 +39,12 @@ namespace Vectores.Classes
             return (float)distance;
         }
 
+        public float Distance(float Ax, float Ay, float Bx, float By)
+        {
+            double distance = Math.Sqrt(Math.Pow(By - Ay, 2) + Math.Pow(Bx - Ax, 2));
+            return (float)distance;
+        }
+
         public int Quadrant(Dots Punto)
         {
             float fX = Punto.fX;

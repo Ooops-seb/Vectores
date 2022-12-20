@@ -42,7 +42,7 @@ namespace Vectores.Classes
         public void DrawMap(PictureBox PicCanvas)
         {
             Graph = PicCanvas.CreateGraphics();
-            PicCanvas.BackColor = Color.White;
+            PicCanvas.BackColor = Color.WhiteSmoke;
             PicCanvas.Cursor = Cursors.Cross;
 
             this.Width= PicCanvas.Width;
@@ -57,8 +57,10 @@ namespace Vectores.Classes
             //Eje X
             Graph.DrawLine(AxisPen, 0, oY, this.Width, oY);
             int topY = 11;
+            Pen Axis = new Pen(Color.White, 1);
             for (int i=0; i < this.Width; i += scale)
             {
+                Graph.DrawLine(Axis, 0, i, this.Height, i);
                 Graph.DrawLine(AxisPen, oX - 5, i, oX + 5, i);
                 if (topY != 0)
                 {
@@ -73,6 +75,7 @@ namespace Vectores.Classes
             Graph.DrawLine(AxisPen, oX, 0, oX, this.Height);
             for (int i = 0; i < this.Height; i += scale)
             {
+                Graph.DrawLine(Axis, i, 0, i, this.Width);
                 Graph.DrawLine(AxisPen, i, oY - 5, i, oY + 5);
                 if (topX != 0)
                 {
@@ -87,7 +90,7 @@ namespace Vectores.Classes
         {
             //Graph.Dispose();
             Graph = PicCanvas.CreateGraphics();
-            Graph.Clear(Color.White);
+            Graph.Clear(Color.WhiteSmoke);
             DrawMap(PicCanvas);
         }
         #endregion

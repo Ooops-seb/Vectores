@@ -47,6 +47,10 @@ namespace Vectores
             Panel_SubMenuDibujoLibre.Visible = false;
             Panel_CuadradoDibujar.Visible = false;
             Panel_SubMenuDibujarTriangulo.Visible = false;
+            Panel_SubMenuRecta.Visible = false;
+            Panel_ResultadoCirculo.Visible = false;
+            Panel_CuadradoDibujar.Visible = false;
+            Panel_TrianguloDibujar.Visible = false;
         }
 
         private void hideMenu()
@@ -57,6 +61,7 @@ namespace Vectores
                 Panel_DibujarFiguras.Visible = false;
             if (Panel_SubMenuDibujoLibre.Visible == true)
                 Panel_SubMenuDibujoLibre.Visible = false;
+            
         }
         private void hideSubMenu()
         {
@@ -66,6 +71,8 @@ namespace Vectores
                 Panel_SubMenuDibujarCuadrado.Visible = false;
             if (Panel_SubMenuDibujarTriangulo.Visible == true)
                 Panel_SubMenuDibujarTriangulo.Visible = false;
+            if (Panel_SubMenuDibujarCirculo.Visible == true)
+                Panel_SubMenuDibujarCirculo.Visible = false;
             if (Panel_SubMenuRecta.Visible == true)
                 Panel_SubMenuRecta.Visible = false;
             if (Panel_CuadradoDibujar.Visible == true)
@@ -94,6 +101,12 @@ namespace Vectores
                 PanelRestaVector.Visible = false;
             if (PanelProductoVector.Visible == true)
                 PanelProductoVector.Visible = false;
+            if (Panel_ResultadoCirculo.Visible == false)
+                Panel_ResultadoCirculo.Visible = true;
+            if (Panel_CuadradoDibujar.Visible == true)
+                Panel_CuadradoDibujar.Visible = false;
+            if (Panel_TrianguloDibujar.Visible == true)
+                Panel_TrianguloDibujar.Visible = false;
         }
 
         private void showMenu(Panel menu)
@@ -139,6 +152,7 @@ namespace Vectores
         }
         private void Btn_MenuDibujarOrigen_Click(object sender, EventArgs e)
         {
+            txtAxisX.Focus();
             pictureBox_FreeDraw.Visible = false;
             Btn_ReDraw.Visible = true;
 
@@ -253,6 +267,7 @@ namespace Vectores
             try
             {
                 PanelSubMenuOperationsEscalar.Enabled = true;
+                txtEscalar.Focus();
                 float x = float.Parse(txtAxisX.Text);
                 float y = float.Parse(txtAxisY.Text);
                 lblVectorActual_PnlEscalar.Visible = true;
@@ -342,6 +357,7 @@ namespace Vectores
             {
                 PanelSuma.Enabled = true;
                 PanelSubMenuOperationsSuma.Enabled = true;
+                txtSumaVectorX2.Focus();
                 float x = float.Parse(txtAxisX.Text);
                 float y = float.Parse(txtAxisY.Text);
                 txtSumaVectorX1.Text = x.ToString();
@@ -373,6 +389,7 @@ namespace Vectores
             }
             catch (Exception)
             {
+                PanelSumaVector.Visible = false;
                 MessageBox.Show("Ingrese valores a sumar.");
             }
         }
@@ -397,7 +414,7 @@ namespace Vectores
             {
                 PanelResta.Enabled = true;
                 PanelSubMenuOperationsResta.Enabled = true;
-
+                txtVectorRestaX2.Focus();
                 txtVectorRestaX1.Text = txtAxisX.Text;
                 txtVectorRestaY1.Text = txtAxisY.Text;
 
@@ -429,6 +446,7 @@ namespace Vectores
             }
             catch (Exception)
             {
+                PanelRestaVector.Visible = false;
                 MessageBox.Show("Ingrese valores a restar.");
             }
         }
@@ -454,6 +472,8 @@ namespace Vectores
             {
                 PanelProducto.Enabled = true;
                 PanelSubMenuOperationsProducto.Enabled = true;
+
+                txtVectorProductoX2.Focus();
 
                 txtVectorProductoX1.Text = txtAxisX.Text;
                 txtVectorProductoY1.Text = txtAxisY.Text;
@@ -495,6 +515,7 @@ namespace Vectores
             }
             catch(Exception)
             {
+                PanelProductoVector.Visible = false;
                 MessageBox.Show("Ingrese valores a calcular.");
             }
         }
@@ -704,9 +725,23 @@ namespace Vectores
 
                 Figure figura = new Figure(pctBox_Graph);
                 figura.Rectangle(pctBox_Graph, PuntoA, PuntoB);
+
+                lblBaseCuadrado.Visible = true;
+                lblAlturaCuadrado.Visible = true;
+                lblPerimetroCuadrado.Visible = true;
+                lblAlturaCuadrado.Visible = true;
+                
+                lblBaseCuadrado.Text = figura.Altura.ToString();
+                lblAlturaCuadrado.Text = figura.Base.ToString();
+
+                lblPerimetroCuadrado.Text = Math.Round(operation.Perimeter(PuntoA, PuntoB, "cuadrado"), 2).ToString();
+                lblAlturaCuadrado.Text = Math.Round(operation.Area(PuntoA, PuntoB, "cuadrado"), 2).ToString();
+
+                showOperationsMenu(Panel_CuadradoDibujar);
             }
             catch(Exception msg)
             {
+                Panel_CuadradoDibujar.Visible = false;
                 MessageBox.Show("¡Ingrese valores a dibujar!"+msg);
             }
         }
@@ -720,7 +755,6 @@ namespace Vectores
         {
             try
             {
-                Panel_TrianguloDibujar.Visible = true;
                 lblBaseTriangulo.Visible = true;
                 lblAlturaTriangulo.Visible = true;
                 lblAreaTriangulo.Visible = true;
@@ -736,9 +770,12 @@ namespace Vectores
 
                 Figure figura = new Figure(pctBox_Graph);
                 figura.Triangle(pctBox_Graph, PuntoA, PuntoB);
+
+                showOperationsMenu(Panel_TrianguloDibujar);
             }
             catch (Exception msg)
             {
+                Panel_TrianguloDibujar.Visible = false;
                 MessageBox.Show("¡Ingrese valores a dibujar!"+msg);
             }
         }
@@ -776,6 +813,32 @@ namespace Vectores
             lblMagnitud.Visible = true;
             lblCuadrante.Visible = true;
             lblAngulo.Visible = true;
+        }
+
+        private void Btn_DibujarCirculo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                float radio = float.Parse(txtRadioCirculo.Text);
+
+                lblPerimetroCirculo.Text = Math.Round(operation.Perimeter(radio), 2).ToString();
+                lblAreaCirculo.Text = Math.Round(operation.Area(radio), 2).ToString();
+
+                Figure figura = new Figure(pctBox_Graph);
+                figura.Circle(pctBox_Graph, radio);
+                showOperationsMenu(Panel_ResultadoCirculo);
+            }
+            catch(Exception msg)
+            {
+                Panel_ResultadoCirculo.Visible = false;
+                MessageBox.Show("¡Ingrese datos!\n" + msg);
+            }
+        }
+
+        private void Btn_SubMenuCirculo_Click(object sender, EventArgs e)
+        {
+            txtRadioCirculo.Focus();
+            showSubMenu(Panel_SubMenuDibujarCirculo);
         }
     }
 }

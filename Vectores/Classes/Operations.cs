@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace Vectores.Classes
 {
     internal class Operations
     {
         private Graphics Graph;
+
         public Operations()
         {
             //Constructor
@@ -22,6 +22,13 @@ namespace Vectores.Classes
             float x = Punto.fX;
             float y = Punto.fY;
 
+            double magnitud = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
+
+            return (float)magnitud;
+        }
+
+        public float Magnitude(float x, float y)
+        {
             double magnitud = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
 
             return (float)magnitud;
@@ -95,19 +102,19 @@ namespace Vectores.Classes
             angle = (float)((rad * 180) / (float)Math.PI);
             if (Quadrant(x, y) == 2)
                 angle += 180;
-            if (Quadrant(x, y) == 3)
+            else if (Quadrant(x, y) == 3)
                 angle = 180 - (-angle);
-            if (Quadrant(x, y) == 4)
+            else if (Quadrant(x, y) == 4)
                 angle += 360;
             return angle;
         }
 
-        public double Perimeter(Point PuntoA, Point PuntoB, String figura)
+        public double Perimeter(Dots PuntoA, Dots PuntoB, String figura)
         {
-            double Ax = (double)PuntoA.X;
-            double Ay = (double)PuntoA.Y;
-            double Bx = (double)PuntoB.X;
-            double By = (double)PuntoB.Y;
+            double Ax = (double)PuntoA.fX;
+            double Ay = (double)PuntoA.fY;
+            double Bx = (double)PuntoB.fX;
+            double By = (double)PuntoB.fY;
 
             double perimetro = 0;
             double ancho = 0;
@@ -127,19 +134,24 @@ namespace Vectores.Classes
             return perimetro;
         }
 
-        public double Area(Point PuntoA, Point PuntoB, String figura)
+        public double Perimeter(float radio)
         {
-            double Ax = (double)PuntoA.X;
-            double Ay = (double)PuntoA.Y;
-            double Bx = (double)PuntoB.X;
-            double By = (double)PuntoB.Y;
+            double perimetro = 2 * Math.PI * radio;
+            return perimetro;
+        }
+
+        public double Area(Dots PuntoA, Dots PuntoB, String figura)
+        {
+            double Ax = (double)PuntoA.fX;
+            double Ay = (double)PuntoA.fY;
+            double Bx = (double)PuntoB.fX;
+            double By = (double)PuntoB.fY;
             double area = 0;
 
             if (figura == "cuadrado")
             {
                 double ancho = Math.Abs(Bx - Ax);
                 double alto = Math.Abs(By - Ay);
-
                 area = ancho * alto;
             }
             else if (figura == "triangulo")
@@ -149,6 +161,12 @@ namespace Vectores.Classes
 
                 area = (ancho * alto) / 2;
             }
+            return area;
+        }
+        
+        public double Area(float radio)
+        {
+            double area = Math.PI * Math.Pow(radio, 2);
             return area;
         }
 
